@@ -24,7 +24,7 @@ const OurTeam = () => {
   return (
     <div className="ourteam-wrapper">
       <p className="ourteam-subtitle">Our Professionals</p>
-      <h2 className="ourteam-title">Flexible Talent For Your Business!</h2>
+      <h2 className="ourteam-title">Tailored Teams For Your Goals!</h2>
       <div className="ourteam-horizontal-cards">
         {teamData.map((item, index) => (
           <div className="ourteam-card" key={index}>

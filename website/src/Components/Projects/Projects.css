@@ -13,7 +13,7 @@
 }
 
 .projects-title {
-  font-size: 3rem;
+  font-size: 3.5rem;
   font-weight: 800;
   color: white;
   margin-bottom: 3rem;
@@ -43,7 +43,6 @@
   background: none;
   color: #10da8c;
   font-size: 24px;
-  border: none;
 }
 
 .react-multi-carousel-arrow--left {
@@ -61,3 +60,24 @@
 .fade-out {
   opacity: 0;
 }
+/* Style for each tab button */
+.tab-button {
+  display: inline-block;
+  padding: 0.6rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  background: transparent;
+  border: 2px solid #10da8c;  /* green border */
+  border-radius: 999px;        /* makes it pill/circle */
+  cursor: pointer;
+  margin: 0 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.tab-button:hover,
+.tab-button.active { /* Optional: active state */
+  background: #10da8c;
+  color: #000; /* Or white for contrast */
+}
+

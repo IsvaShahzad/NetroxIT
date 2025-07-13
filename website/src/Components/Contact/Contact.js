@@ -5,7 +5,7 @@ const Contact = () => {
   return (
     <div className="contact-section">
       <div className="contact-left">
-        <h2>Your Solutions Are One Call Away<br />Let’s Reach Out Today!</h2>
+        <h2>Solutions Made Simple<br />Let’s Get in Touch Today!</h2>
       </div>
       <div className="contact-right">
         <button
@@ -15,7 +15,7 @@ const Contact = () => {
           Call Us
         </button>
         <a
-          href="https://mail.google.com/mail/?view=cm&to=netroxit@gmail.com"
+          href="https://mail.google.com/mail/?view=cm&to=netroxit00@gmail.com"
           target="_blank"
           rel="noopener noreferrer"
         >
