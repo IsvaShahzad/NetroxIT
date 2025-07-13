@@ -24,6 +24,7 @@ body {
   z-index: 999;
   backdrop-filter: blur(24px);
   margin-bottom: 10px;
+  
 }
 
 .navbar-container {
@@ -52,10 +53,12 @@ body {
 .logo-text {
   font-family: 'WDXL Lubrifont SC', sans-serif;
   color: #fff;
-  font-size: 2.2rem;
+  font-size: 2rem;
   margin-left: 8px;
   letter-spacing: 1.5px;
   font-weight: 600;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+
 }
 
 .fa-typo3 {
@@ -111,7 +114,7 @@ body {
   display: none;
 }
 
-.contact-btn {
+/* .contact-btn {
   padding: 1rem 3rem;
   font-size: 1rem;
   font-weight: 600;
@@ -119,15 +122,15 @@ body {
   border-radius: 8px;
   cursor: pointer;
   transition: all 0.3s ease;
-}
+} */
 
 
-.contact-btn.secondary {
+/* .contact-btn.secondary {
   background-color: transparent;
   color: #ffffff;
   border: 2px solid #10da8c;
   transition: all 0.3s ease;
-}
+} */
 
 .contact-btn.secondary:hover {
   background-color: #eff5f3;

@@ -10,6 +10,7 @@
   align-items: center;
   box-shadow: 0 0 30px rgba(2, 161, 126, 0.2);
   font-family: 'Plus Jakarta Sans', sans-serif;
+
 }
 
 .stats-content {
@@ -104,3 +105,14 @@
     margin-top: 30px;
   }
 }
+.stats-heading {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #ffffff; /* or your brand color */
+  text-align: center;
+  margin-bottom: 4rem;
+  margin-top: 4rem;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+

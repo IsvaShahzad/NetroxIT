@@ -46,14 +46,15 @@ function NavBar({ onNavClick }) {
                 Reviews
               </span>
             </li>
-            <li >
-              <a 
-  href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=netroxit000@gmail.com"
-              
-              className="contact-btn secondary" target="_blank" rel="noopener noreferrer">
-                Contact Us
-              </a>
-            </li>
+        <li className='nav-item'>
+  <span
+    className='nav-links'
+    onClick={() => window.open('https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=netroxit000@gmail.com', '_blank')}
+  >
+    Contact Us
+  </span>
+</li>
+
 
 
       

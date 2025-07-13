@@ -51,46 +51,50 @@ const HomeStats = forwardRef((props, ref) => {
   ];
 
   return (
-    <div className="stats-container" id="reviews" ref={ref}>
-      <div className="stats-content">
-        {/* Left: Stats */}
-        <div className="stats-left">
-          <div className="stat-item">
-            <p>Years of Experience</p>
-            <h2>{triggerAnimation ? <AnimatedNumber key="1" value={7} /> : 0}+</h2>
+    <div className="stats-section">
+      <h2 className="stats-heading">Our Trusted Clients</h2>
+      <div className="stats-container" id="reviews" ref={ref}>
+        <div className="stats-content">
+          {/* Left: Stats */}
+          <div className="stats-left">
+            <div className="stat-item">
+              <p>Years of Experience</p>
+              <h2>{triggerAnimation ? <AnimatedNumber key="1" value={7} /> : 0}+</h2>
+            </div>
+            <div className="stat-item">
+              <p>Projects Delivered</p>
+              <h2>{triggerAnimation ? <AnimatedNumber key="2" value={80} /> : 0}+</h2>
+            </div>
+            <div className="stat-item">
+              <p>Happy Clients</p>
+              <h2>{triggerAnimation ? <AnimatedNumber key="3" value={100} /> : 0}%</h2>
+            </div>
           </div>
-          <div className="stat-item">
-            <p>Projects Delivered</p>
-            <h2>{triggerAnimation ? <AnimatedNumber key="2" value={80} /> : 0}+</h2>
-          </div>
-          <div className="stat-item">
-            <p>Happy Clients</p>
-            <h2>{triggerAnimation ? <AnimatedNumber key="3" value={100} /> : 0}%</h2>
-          </div>
-        </div>
 
-        {/* Right: Carousel */}
-        <div className="stats-carousel">
-          <Swiper
-            autoplay={{ delay: 2000, disableOnInteraction: false }}
-            pagination={{ clickable: true }}
-            modules={[Pagination, Autoplay]}
-            className="testimonial-swiper"
-          >
-            {testimonials.map((testimonial, index) => (
-              <SwiperSlide key={index}>
-                <div className="testimonial-card">
-                  <p className="quote">“{testimonial.quote}”</p>
-                  <p className="author">– {testimonial.author}</p>
-                </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
+          {/* Right: Carousel */}
+          <div className="stats-carousel">
+            <Swiper
+              autoplay={{ delay: 2000, disableOnInteraction: false }}
+              pagination={{ clickable: true }}
+              modules={[Pagination, Autoplay]}
+              className="testimonial-swiper"
+            >
+              {testimonials.map((testimonial, index) => (
+                <SwiperSlide key={index}>
+                  <div className="testimonial-card">
+                    <p className="quote">“{testimonial.quote}”</p>
+                    <p className="author">– {testimonial.author}</p>
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
         </div>
       </div>
     </div>
   );
 });
+
 
 const AnimatedNumber = ({ value }) => {
   const [count, setCount] = useState(0);

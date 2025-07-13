@@ -64,7 +64,13 @@ const Services = forwardRef((props, ref) => {
   return (
     <div className="services-wrapper" ref={ref}>
       <div className='blur'></div>
-      <p className="services-subtitle">OUR SERVICES</p>
+
+<section id="services">
+  <p className="services-subtitle">OUR SERVICES</p>
+  {/* More content about services */}
+
+ 
+</section>
       <h2 className="services-title">Innovating Beyond Limits with Modern Tech</h2>
 
       <div className="services-grid">
