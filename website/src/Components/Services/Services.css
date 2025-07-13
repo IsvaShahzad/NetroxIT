@@ -1,0 +1,54 @@
+.blur {
+    position: absolute;
+    width: 17rem;
+    height: 3rem;
+    z-index: -9;
+    filter: blur(80px);
+    background: #11aa6f;
+    border-radius: 50%;
+    top: 5%;
+    left: 38%;
+    
+  }
+.services-wrapper {
+    position: relative;
+    padding: 4rem 5%;
+    color: white;
+    text-align: center;
+
+  }
+  
+  .services-subtitle {
+    color: #10da8c;
+    font-weight: 600;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: -22px;
+    font-size: 24px;
+
+  }
+  
+  .services-title {
+    font-size: 2.8rem;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 800;
+    margin-bottom: 5rem;
+  }
+  
+  .services-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2.5rem;
+  }
+  @media screen and (max-width: 768px) {
+    .services-title {
+      font-size: 2.5rem;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .services-title {
+      font-size: 2rem;
+    }
+  }

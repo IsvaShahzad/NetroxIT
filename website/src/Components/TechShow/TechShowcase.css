@@ -1,0 +1,316 @@
+.tech-section {
+  position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3rem;
+    padding: 5% 7%;
+    color: white;
+    overflow-x: hidden;
+    
+  }
+  .blur-right {
+    position: absolute;
+    width: 17rem;
+    height: 15rem;
+    z-index: -9;
+    filter: blur(220px);
+    background: #11aa6f;
+    border-radius: 50%;
+    top: 35%;
+    left: 13%;
+  }
+  
+  .tech-left-content {
+    position: relative;
+    flex: 1;
+    min-width: 300px;
+    max-width: 700px;
+    margin-right: 10%;
+    z-index: 10;
+  }
+  
+  .tech-left-content h4 {
+    text-transform: uppercase;
+    color: #10da8c;
+    font-size: 1.3rem;
+    margin-bottom: -10px;
+    font-weight: 600;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    letter-spacing: 0.1em;
+
+  }
+  
+  .tech-left-content h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+  
+  .tech-left-content p {
+    font-size: 1.2rem;
+    color: #ccc;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2rem;
+
+  }
+  
+  .tech-tags button {
+    padding: 0.6rem 2rem;
+    background: transparent;
+    border: 1px solid #11aa6f;
+    color: #11aa6f;
+    border-radius: 999px; /* large radius makes it pill-shaped */
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 1.3rem;
+
+  }
+  
+  .tech-tags button:hover {
+    background: #11aa6f;
+    color: white;
+  }
+  
+  .tech-contact-btn {
+    display: inline-block;
+    padding: 0.75rem 2rem;
+    background: #11aa6f;
+    color: white;
+    font-weight: 600;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+  }
+  
+  .tech-contact-btn:hover {
+    background: #0f8b5b;
+  }
+  
+  .tech-right-content {
+    flex: 1;
+    min-width: 400px;
+    margin-top: 3%;
+    position: relative;
+
+  }
+.tech-hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #0d0d0d;
+  padding: 4rem 5%;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.art-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tech-art {
+  max-width: 500px;
+  width: 100%;
+  height: auto;
+}
+
+.floating-card {
+  position: absolute;
+  right: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.tech-card-content {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 2rem;
+  max-width: 350px;
+  color: white;
+  text-align: center;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  animation: floatIn 1.3s ease-out;
+}
+
+.tech-card-content h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.tech-card-content p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+.glass-btn {
+  background: #0fd685;
+  color: #000;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.glass-btn:hover {
+  background: #0bb86a;
+}
+
+@keyframes floatIn {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.floating-card {
+  position: absolute;
+  width: 240px;
+  z-index: 5;
+  animation: floatIn 1.3s ease-out;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  animation: floatIn 1.3s ease-out, gentleFloat 6s ease-in-out infinite;
+}
+@keyframes gentleFloat {
+  0% {
+    transform: translateY(-50%) translateX(0);
+  }
+  25% {
+    transform: translateY(-54%) translateX(4px);
+  }
+  50% {
+    transform: translateY(-50%) translateX(0);
+  }
+  75% {
+    transform: translateY(-46%) translateX(-4px);
+  }
+  100% {
+    transform: translateY(-50%) translateX(0);
+  }
+}
+
+
+
+.top-card {
+  top: 30px;
+  left: 60%;
+}
+
+.bottom-card {
+  top: 55%;
+  left: -25%;
+}
+
+
+.floating-card-content {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  color: white;
+  text-align: center;
+  padding-left: 5px;
+  padding-right: 5px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+.floating-card-content h2 {
+  font-size: 1.1rem;
+  color: #10da8c;
+}
+
+.floating-card-content p {
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  line-height: 1.2;
+
+}
+.tech-card {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.tech-card img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media screen and (max-width: 960px) {
+ .tech-left-content {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-left: 3%;
+ }
+ .tech-tags{
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+ }
+ .tech-right-content{
+  margin-left: -10%;
+ }
+  .floating-card {
+    position: static !important;
+    transform: none !important;
+    width: 100%;
+    max-width: 300px;
+    margin: 1rem auto;
+    animation: gentleFloat 6s ease-in-out infinite;
+    
+  }
+  .tech-card img {
+    width: 70%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: auto;
+    display: block;
+  }
+  .blur-right {
+    display: none;
+  }
+
+  .top-card,
+  .bottom-card {
+    top: auto;
+    left: auto;
+  }
+  
+
+  .tech-right-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

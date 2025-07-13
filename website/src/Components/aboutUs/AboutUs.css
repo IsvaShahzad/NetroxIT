@@ -1,0 +1,223 @@
+/* === GLOBAL FIX === */
+body {
+  overflow-x: hidden;
+}
+
+/* === ABOUT SECTION === */
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 4rem 5%;
+  color: white;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  justify-content: space-between;
+  position: relative;
+  overflow-x: hidden; /* 💡 Prevent horizontal scroll */
+  box-sizing: border-box;
+}
+
+.blur {
+  position: absolute;
+  width: 17rem;
+  height: 3rem;
+  z-index: -9;
+  filter: blur(80px);
+  background: #11aa6f;
+  border-radius: 50%;
+  top: 25%;
+  left: 3%;
+}
+
+.about-left {
+  flex: 1;
+  min-width: 300px;
+  max-width: 600px;
+  margin-top: 3%;
+}
+
+.subheading {
+  color: #10da8c;
+  font-weight: 600;
+  margin-bottom: 4%;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+    font-size: 1.3rem;
+
+}
+
+.main-heading {
+  font-size: 3.2rem;
+  font-weight: 800;
+  margin: 0;
+  word-wrap: break-word;
+  max-width: 100%;
+}
+
+.about-description {
+ 
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin: 3rem 0 2rem;
+  color: #ccc;
+}
+
+.about-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.primary-btn,
+.outline-btn {
+  background-color: #11aa6f;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.outline-btn {
+  background: transparent;
+  border: 2px solid #11aa6f;
+  color: #11aa6f;
+}
+
+.about-right {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 3rem;
+  gap: 0.5rem;
+  max-width: 570px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about-card {
+  --grad: #10da8c, #0f412db0;
+  cursor: pointer;
+  padding: 1.05rem;
+  background-image: linear-gradient(to bottom left, #f1f4f6, #e8edef);
+  border-radius: 1.25rem;
+  display: grid;
+  grid-template:
+    "card-title card-icon"
+    "card-content card-content"
+    "card-bar card-bar" / 1fr auto;
+  gap: 0.15rem;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: #333;
+  box-shadow: inset -1px 1px #fff, -10px 10px 25px rgba(0, 0, 0, 0.08);
+  width: 100%;
+}
+
+.card-title {
+  grid-area: card-title;
+  font-size: 2rem;
+  font-weight: 500;
+  font-family: 'Lilita One', cursive;
+  text-transform: uppercase;
+  align-self: center;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.card-icon {
+  grid-area: card-icon;
+  font-size: 2.5rem;
+  align-self: center;
+  background: linear-gradient(to right, var(--grad));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.card-content {
+  grid-area: card-content;
+  font-size: 17px;
+  line-height: 1.4;
+  color: #555;
+}
+
+.about-card::after {
+  content: "";
+  grid-area: card-bar;
+  height: 2px;
+  width: 100%;
+  margin-top: 0.25rem;
+  border-radius: 50px;
+  background: linear-gradient(
+    90deg,
+    #0b3b29 0%,
+    #11aa6f 20%,
+    rgba(255, 255, 255, 0.3) 50%,
+    #11aa6f 80%,
+    #09462f 100%
+  );
+  background-size: 400% 100%;
+  background-position: 0% center;
+  background-repeat: no-repeat;
+  animation: shimmer 5s infinite linear;
+  box-shadow: 0 0 4px rgba(16, 218, 140, 0.25);
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 100% center;
+  }
+  100% {
+    background-position: 0% center;
+  }
+}
+
+/* === RESPONSIVE ADJUSTMENTS === */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    align-items: center;
+
+  }
+
+  .main-heading {
+    font-size: 2rem;
+  }
+
+  .about-left,
+  .about-right {
+    text-align: center;
+    max-width: 100%;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  .about-buttons {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .about-card {
+    width: 100%;
+    max-width: 250px;
+    margin: 0 auto;
+    margin-left: 2%;
+    margin-right: 5%;
+  }
+  .card-title {
+    font-size: 1.5rem;
+  }
+  .blur {
+    display: none;
+  }
+  .card-icon{
+    font-size: 1.5rem;
+  }
+  .card-content{
+    font-size: 14px;
+  }
+}

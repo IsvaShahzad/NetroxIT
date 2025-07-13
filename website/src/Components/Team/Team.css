@@ -1,0 +1,79 @@
+.blur {
+    position: absolute;
+    width: 17rem;
+    height: 3rem;
+    z-index: -9;
+    filter: blur(80px);
+    background: #11aa6f;
+    border-radius: 50%;
+    top: 5%;
+    left: 38%;
+}
+
+.team-wrapper {
+  padding: 5rem 5%;
+  text-align: center;
+  position: relative;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: white;
+  
+}
+
+
+.team-subtitle {
+    color: #10da8c;
+    font-weight: 600;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: -22px;
+    
+}
+
+.teams-title {
+    font-size: 2.5rem;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 800;
+    margin-bottom: 2rem;
+}
+
+.team-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 6rem;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    
+    
+
+}
+
+
+@media screen and (max-width: 768px) {
+    .team-title {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .team-title {
+        font-size: 1.5rem;
+    }
+}
+.team-card img {
+  width: 100%;
+  height: auto;      
+  object-fit: cover;    
+  border-radius: 8px;   
+  display: block;
+
+}
+.team-card {
+  text-align: center;
+  color: white; 
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  
+}
+
+
