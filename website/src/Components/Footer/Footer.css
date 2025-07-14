@@ -1,66 +1,49 @@
 .footer {
   background-color: #101710;
   color: #ffffff;
-  padding: 40px 0 10px; /* top/bottom only, no side padding */
+  padding: 40px 0 10px;
   font-family: 'Segoe UI', sans-serif;
 }
 
 .footer-container {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 30px;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  gap: 60px;
   max-width: 1200px;
-  margin: 0 auto; /* Center container horizontally */
-  padding: 0 20px; /* 👈 add side padding if you want some breathing room */
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
-.footer-logo {
-  flex: 1 1 250px;
+.footer-logo-column {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  margin-top: 30px; /* space above logo block */
+  margin-left: 40px; /* adjust to move logo right/left */
 }
 
-.footer-logo .brand {
-  display: block;     
-  width: 200px;   
+.footer-small-logo {
+  width: 120px;
   height: auto;
-  margin-left: 0;
-  margin-bottom: 0;  
 }
 
-
-.footer-logo p {
-  font-size: 20px;
-  line-height: 1.5;
-  margin-bottom: 15px;
-  margin-top: 20px; 
-
+.footer-logo-description {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-top: 15px;
+  max-width: 250px;
+  color: #ffffff;
 }
 
-.social-icons {
+.footer-links-group {
   display: flex;
-  gap: 10px;
-  font-size: 30px;
-  color: #ffffff;
-}
-
-.footer-logo .social-icons a {
-  color: #ffffff;
-  font-size: 25px;
-  transition: color 0.3s ease;
-}
-
-.footer-logo .social-icons a:hover {
-  color: #00e68a;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 60px;
 }
 
 .footer-links,
 .footer-contact {
-  flex: 1 1 180px;
-  color: #ffffff;
+  flex: 0 0 auto;
 }
 
 .footer-links h4,
@@ -68,18 +51,29 @@
   font-size: 16px;
   margin-bottom: 10px;
   color: #00e68a;
-  
 }
 
 .footer-links ul {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 .footer-links li {
   font-size: 14px;
   margin-bottom: 8px;
-  
+  cursor: pointer;
+}
+
+.footer-links a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #00e68a;
+  text-decoration: underline;
 }
 
 .footer-contact p {
@@ -88,17 +82,6 @@
   align-items: center;
   gap: 8px;
   margin-bottom: 10px;
-  color: #ffffff;
-}
-
-.footer-contact .social-icon {
-  color: #ffffff;
-  font-size: 25px;
-  transition: color 0.3s ease;
-}
-
-.footer-contact .social-icon:hover {
-  color: #00e68a;
 }
 
 .footer-bottom {
@@ -110,32 +93,39 @@
   color: #aaa;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .footer-logo {
-    display: none; /* if you want to hide logo on small screens */
-  }
+.social-icons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
 
+.social-icons a {
+  color: #ffffff;
+  font-size: 20px;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #00e68a;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (max-width: 768px) {
   .footer-container {
     flex-direction: column;
     align-items: flex-start;
   }
 
-  .footer-links,
-  .footer-contact {
-    margin-top: 20px;
+  .footer-links-group {
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 30px;
   }
-}
-.footer-links a {
-  color: #ffffff; /* White by default */
-  text-decoration: none; /* Optional: remove underline */
-  transition: color 0.3s ease; /* Smooth hover */
-}
 
-.footer-links a:hover {
-  color: #00e68a; /* Your green hover color */
-  text-decoration: underline; /* Optional: add underline on hover */
-}
-html {
-  scroll-behavior: smooth;
+  .footer-logo-column {
+    margin-left: 0;
+  }
 }

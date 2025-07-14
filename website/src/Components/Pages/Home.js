@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import React from 'react';
 import '../../App.css';
 import Main from '../Main/main';
 import HomeStats from '../Stats/HomeStats';
@@ -11,33 +11,38 @@ import Team from '../Team/Team';
 import Contact from '../Contact/Contact';
 import Footer from '../Footer/Footer';
 
-function Home({ refs }) {
-    const statsRef = useRef(null);
-    const aboutRef = useRef(null);
-    const servicesRef = useRef(null);
+function Home({ statsRef, aboutRef, servicesRef , productref }) {
+  return (
+    <>
+      <Main />
 
-    useEffect(() => {
-        if (refs) {
-            refs.statsRef.current = statsRef;
-            refs.aboutRef.current = aboutRef;
-            refs.servicesRef.current = servicesRef;
-        }
-    }, [refs]);
+      <section id="reviews">
+        <HomeStats ref={statsRef} />
+      </section>
 
-    return (
-        <>
-            <Main />
-            <HomeStats ref={statsRef} />
-            <AboutUs ref={aboutRef} />
-            <Services ref={servicesRef} />
-            <TechShowcase />
-            <Projects />
-            <OurTeam />
-            <Team />
-            <Contact />
-            <Footer />
-        </>
-    );
+      <section id="company">
+        <AboutUs ref={aboutRef} />
+      </section>
+
+      <section id="services">
+        <Services ref={servicesRef} />
+      </section>
+
+       <section id="products">
+        <Projects  ref={productref}  />
+      </section>
+
+    
+
+      <TechShowcase />
+      <Projects />
+      <OurTeam />
+      <Team />
+      <Contact />
+      <Footer />
+    </>
+  );
 }
+
 
 export default Home;

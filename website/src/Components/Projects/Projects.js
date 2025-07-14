@@ -104,7 +104,7 @@ const Projects = () => {
 
   return (
     <div className="projects-wrapper">
-      <p className="projects-subtitle">OUR PROJECTS</p>
+      <p className="projects-subtitle">OUR   PRODUCTS</p>
       <h2 className="projects-title">Showcasing Innovation, Delivering Impact</h2>
       <ProjectsTabs activeTab={activeTab} onTabChange={setActiveTab} />
       <div className={`projects-container ${fadeClass}`}>
