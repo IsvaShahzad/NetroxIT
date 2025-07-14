@@ -6,29 +6,27 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { BrowserRouter as Router, Routes, Route, useNavigate, useLocation } from 'react-router-dom';
 import React, { useRef } from 'react';
-
+import ServicePage from './Components/ServicePage/servicepage.js';
 
 function AppWrapper() {
+  // ✅ refs to DOM nodes
   const statsRef = useRef(null);
   const aboutRef = useRef(null);
   const servicesRef = useRef(null);
-  const refs = { statsRef, aboutRef, servicesRef };
 
   const navigate = useNavigate();
   const location = useLocation();
 
-const scrollTo = (ref) => {
-  if (ref?.current?.current) {
-    const element = ref.current.current;
-    const yOffset = -100; // 👈 Make this more negative to scroll *higher*
-    const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
-    window.scrollTo({ top: y, behavior: 'smooth' });
-  }
-};
-
-
+  const scrollTo = (ref) => {
+    if (ref?.current) {
+      const yOffset = -100; // adjust for sticky navbar
+      const y = ref.current.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      window.scrollTo({ top: y, behavior: 'smooth' });
+    }
+  };
 
   const handleNavClick = (section) => {
+
     const refMap = {
       reviews: statsRef,
       company: aboutRef,
@@ -39,7 +37,7 @@ const scrollTo = (ref) => {
       scrollTo(refMap[section]);
     } else {
       navigate('/');
-      setTimeout(() => scrollTo(refMap[section]), 300);
+      setTimeout(() => scrollTo(refMap[section]), 500);
     }
   };
 
@@ -47,7 +45,25 @@ const scrollTo = (ref) => {
     <>
       <NavBar onNavClick={handleNavClick} />
       <Routes>
-        <Route path='/' element={<Home refs={refs} />} />
+        <Route path="/" element={
+          <Home 
+            statsRef={statsRef} 
+            aboutRef={aboutRef} 
+            servicesRef={servicesRef} 
+          />
+        } />
+
+        <Route
+  path="/webapp"
+  element={
+    <ServicePage
+      title="Web App Development Services"
+      description="Expand your reach to a global audience, unlock new growth opportunities, and broaden your business operations with our web application solutions."
+      image="/images/webapp-hero.png" // Save your illustration here
+    />
+  }
+/>
+
       </Routes>
     </>
   );
