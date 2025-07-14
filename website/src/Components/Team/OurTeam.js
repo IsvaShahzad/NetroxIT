@@ -3,21 +3,34 @@ import './OurTeam.css';
 
 const teamData = [
 
-  {
-    id: '01',
-    title: 'CyberSecurity Specialist',
-    description: 'Your online assets, fiercely protected by forward-thinking security pros.',
-  },
-  {
+ {
     id: '02',
     title: 'Full Stack Developer',
     description: 'Dedicated developers powering the next generation of digital platforms.',
   },
+     {
+    id: '02',
+    title: 'Web Developer',
+    description: 'Building responsive, powerful web solutions that fuel digital growth.',
+  },
+ 
+    {
+    id: '01',
+    title: 'Mobile App Developer',
+    description: 'Building mobile apps that turn visionary ideas into everyday essentials.',
+  },
+    {
+    id: '01',
+    title: 'Cybersecurity Specialist',
+    description: 'Your online assets, fiercely protected by forward-thinking security pros.',
+  },
   {
-    id: '03',
+    id: '04',
     title: 'Graphic Designer',
     description: 'Crafting visionary ideas into unforgettable digital journeys.',
   },
+
+ 
 ];
 
 const OurTeam = () => {

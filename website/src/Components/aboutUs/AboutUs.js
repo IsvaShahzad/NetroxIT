@@ -41,7 +41,7 @@ const AboutUs = forwardRef((props, ref) => {
           <div className="card-title">Our Mission</div>
           <div className="card-icon"><i className="fa-solid fa-bullseye"></i></div>
           <div className="card-content">
-            <p>At NetroxIT, we craft bold, custom software that fuels growth, simplifies operations, and elevates digital presence. Blending tech, creativity, and strategy. We solve real-world problems with solutions that spark real impact.</p>
+            <p>Our mission is to empower businesses to grow and thrive by building custom software solutions that simplify operations, fuel innovation, and create measurable impact.</p>
           </div>
         </div>
         {/* <div className="about-card">

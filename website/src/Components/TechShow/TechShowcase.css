@@ -263,6 +263,8 @@
   max-width: 100%;
   height: auto;
   display: block;
+  background: transparent;
+
 }
 
 @media screen and (max-width: 960px) {

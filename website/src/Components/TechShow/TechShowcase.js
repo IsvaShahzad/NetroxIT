@@ -51,7 +51,7 @@ const TechShowcase = () => {
         <div className="blur-right"></div>
 
         <div className="tech-card">
-          <img src="https://assets.codepen.io/3421562/figma_graphic.png" alt="Tech Graphic" />
+          <img src="./images/make4.png" alt="My Graphic"/>
         </div>
 
 
