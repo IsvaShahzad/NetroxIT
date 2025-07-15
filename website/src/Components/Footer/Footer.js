@@ -22,7 +22,7 @@ const Footer = () => {
 };
 
   return (
-    <footer className="footer">
+    <footer id="footer" className="footer">
       <div className="footer-container">
 
         {/* LOGO & DESCRIPTION */}
@@ -59,12 +59,17 @@ const Footer = () => {
 
           <div className="footer-contact">
             <h4>Contact Us</h4>
-            <p>
-              <MdEmail />{" "}
-              <a href="mailto:netroxit000@gmail.com" target="_blank" rel="noopener noreferrer">
-                netroxit000@gmail.com
-              </a>
-            </p>
+           <p>
+  <MdEmail />{" "}
+  <a
+    href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=netroxit000@gmail.com"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    netroxit000@gmail.com
+  </a>
+</p>
+
             <p>
               <MdPhone /> +92 3140597523
             </p>

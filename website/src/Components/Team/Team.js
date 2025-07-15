@@ -17,7 +17,7 @@ const TeamData = [
     {
         image: "/images/MM1.jpg",
         title: "Mariam Mumtaz",
-        description: "Creative Lead"
+        description: "Creative Head"
     },
 
     {
