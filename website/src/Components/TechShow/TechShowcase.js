@@ -10,7 +10,7 @@ const TechShowcase = () => {
   };
 
   return (
-    <div className="tech-section">
+    <div className="tech-section1">
       <div className="tech-left-content">
         <h4>OUR TECH STACK</h4>
         <h1>Empowering Innovation with Modern Technologies</h1>
@@ -48,7 +48,7 @@ const TechShowcase = () => {
       </div>
 
       <div className="tech-right-content">
-        <div className="blur-right"></div>
+        <div className="blur-right1"></div>
 
         <div className="tech-card">
           <img src="./images/make4.png" alt="My Graphic"/>

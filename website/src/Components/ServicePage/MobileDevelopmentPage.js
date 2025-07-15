@@ -7,6 +7,52 @@ function MobileDevelopmentPage() {
   const [activeTab, setActiveTab] = useState('Frontend');
   const [isTechVisible, setIsTechVisible] = useState(false);
   const techSectionRef = useRef(null);
+  const [activeIndex, setActiveIndex] = useState(null);
+
+const faqData = [
+  {
+    question: 'What kinds of mobile apps can you develop?',
+    answer: 'We build cross-platform mobile applications for iOS and Android using Flutter and React Native. From MVPs to complex, scalable solutions, we tailor each app to meet your business goals and your users’ expectations.',
+  },
+  {
+    question: 'Do you provide UI/UX design services?',
+    answer: 'Yes! We have an in-house design team that creates user-friendly, visually engaging interfaces. We follow best practices for wireframing, prototyping, and usability testing to ensure the final product delights users.',
+  },
+  {
+    question: 'How much does a typical project cost?',
+    answer: 'Project costs vary depending on complexity, features, integrations, and timeline. We provide clear, upfront estimates after understanding your requirements and always keep you informed throughout development.',
+  },
+  {
+    question: 'What technologies do you specialize in?',
+    answer: 'We specialize in Flutter, React Native, Firebase, Node.js, MongoDB, REST APIs, and more. Our team chooses the right stack to match your project’s technical needs and future growth plans.',
+  },
+  {
+    question: 'How long will it take to launch my app?',
+    answer: 'Timelines depend on the size and complexity of your project. On average, simple apps take 4–8 weeks, while more advanced platforms may take 3–6 months. We always aim to deliver efficiently without compromising quality.',
+  },
+  {
+    question: 'Will I own the code and IP?',
+    answer: 'Absolutely. You will have complete ownership of the final source code and intellectual property once the project is complete and paid for. We believe in full transparency and client ownership.',
+  },
+  {
+    question: 'Do you offer ongoing support and updates?',
+    answer: 'Yes! After launch, we can help maintain your app, fix bugs, roll out updates, and add new features. We offer flexible support plans to keep your product secure and up to date.',
+  },
+  {
+    question: 'How do we get started?',
+    answer: 'It’s simple — reach out to us through our Contact Us page or schedule a free consultation. We’ll discuss your vision, define goals, and plan a roadmap to bring your idea to life!',
+  },
+];
+
+
+const toggleFAQ = (index) => {
+  if (activeIndex === index) {
+    setActiveIndex(null);
+  } else {
+    setActiveIndex(index);
+  }
+};
+
 
   useEffect(() => {
     const handleScroll = () => {
@@ -31,6 +77,7 @@ function MobileDevelopmentPage() {
         }
       }
     };
+    
 
     window.addEventListener('scroll', handleScroll);
     // Trigger once on mount to check initial position
@@ -99,8 +146,8 @@ function MobileDevelopmentPage() {
  <div className="tech-icons">
     <div className="tech-icons-blur"></div> 
 
-  {activeTab === 'Languages' && (
-    <div className="tech-icon-set">
+  <div className={`tech-icon-set ${activeTab === 'Languages' ? 'active' : ''}`}>
+
       <div className="tech-icon-item">
         <img src="/images/dart-icon.png" alt="Dart" />
         <p>Dart</p>
@@ -130,75 +177,93 @@ function MobileDevelopmentPage() {
         <p>Python</p>
       </div>
     </div>
-  )}
-
   
 
-  {activeTab === 'Frameworks' && (
-    <div className="tech-icon-set">
-      <div className="tech-icon-item">
-        <img src="/images/flutter2-icon.png" alt="Flutter" />
-        <p>Flutter</p>
-      </div>
-      <div className="tech-icon-item">
-        <img src="/images/react2-icon.png" alt="React Native" />
-        <p>React Native</p>
-      </div>
-      <div className="tech-icon-item">
-        <img src="/images/android-os.png" alt="Android SDK" />
-        <p>Android SDK</p>
-      </div>
-      <div className="tech-icon-item">
-        <img src="/images/un1.png" alt="Unity" />
-        <p>Unity</p>
-      </div>
-    </div>
-  )}
+  
+  
+<div className={`tech-icon-set ${activeTab === 'Frameworks' ? 'active' : ''}`}>
+  <div className="tech-icon-item">
+    <img src="/images/flutter2-icon.png" alt="Flutter" />
+    <p>Flutter</p>
+  </div>
+  <div className="tech-icon-item">
+    <img src="/images/react2-icon.png" alt="React Native" />
+    <p>React Native</p>
+  </div>
+  <div className="tech-icon-item">
+    <img src="/images/android-os.png" alt="Android SDK" />
+    <p>Android SDK</p>
+  </div>
+  <div className="tech-icon-item">
+    <img src="/images/un1.png" alt="Unity" />
+    <p>Unity</p>
+  </div>
+</div>
 
-  {activeTab === 'Databases' && (
-    <div className="tech-icon-set">
-      <div className="tech-icon-item">
-        <img src="/images/firebase.png" alt="Firebase" />
-        <p>Firebase</p>
-      </div>
-      <div className="tech-icon-item">
-        <img src="/images/sql.png" alt="MySQL" />
-        <p>MySQL</p>
-      </div>
-      <div className="tech-icon-item">
-        <img src="/images/md4.png" alt="MongoDB" />
-        <p>MongoDB</p>
-      </div>
-      <div className="tech-icon-item">
-        <img src="/images/sqlite.png" alt="SQLite" />
-        <p>SQLite</p>
-      </div>
-    </div>
-  )}
+<div className={`tech-icon-set ${activeTab === 'Databases' ? 'active' : ''}`}>
+  <div className="tech-icon-item">
+    <img src="/images/firebase.png" alt="Firebase" />
+    <p>Firebase</p>
+  </div>
+  <div className="tech-icon-item">
+    <img src="/images/sql.png" alt="MySQL" />
+    <p>MySQL</p>
+  </div>
+  <div className="tech-icon-item">
+    <img src="/images/md4.png" alt="MongoDB" />
+    <p>MongoDB</p>
+  </div>
+  <div className="tech-icon-item">
+    <img src="/images/lite3.png" alt="SQLite" />
+    <p>SQLite</p>
+  </div>
+</div>
 
-  {activeTab === 'Tools' && (
-    <div className="tech-icon-set">
-      <div className="tech-icon-item">
-        <img src="/images/android-studio.png" alt="Android Studio" />
-        <p>Android Studio</p>
-      </div>
-      <div className="tech-icon-item">
-        <img src="/images/vscode.png" alt="VS Code" />
-        <p>VS Code</p>
-      </div>
-      <div className="tech-icon-item">
-        <img src="/images/figma.png" alt="Figma" />
-        <p>Figma</p>
-      </div>
-      <div className="tech-icon-item">
-        <img src="/images/photoshop.png" alt="Photoshop" />
-        <p>Photoshop</p>
-      </div>
-    </div>
-  )}
+<div className={`tech-icon-set ${activeTab === 'Tools' ? 'active' : ''}`}>
+  <div className="tech-icon-item">
+    <img src="/images/as.png" alt="Android Studio" />
+    <p>Android Studio</p>
+  </div>
+  <div className="tech-icon-item">
+    <img src="/images/vs.png" alt="VS Code" />
+    <p>VS Code</p>
+  </div>
+  <div className="tech-icon-item">
+    <img src="/images/figma3.png" alt="Figma" />
+    <p>Figma</p>
+  </div>
+  <div className="tech-icon-item">
+    <img src="/images/ps2.png" alt="Photoshop" />
+    <p>Photoshop</p>
+  </div>
+</div>
+
 </div>
 
 </section>
+
+<section className="faq-section">
+  <div className="faq-left">
+    <h2>Frequently Asked Questions</h2>
+    <img src="/images/rr.jpg" alt="FAQ Illustration" />
+  </div>
+
+  <div className="faq-right">
+    {faqData.map((faq, index) => (
+      <div key={index} className={`faq-item ${activeIndex === index ? 'open' : ''}`}>
+        <div className="faq-question" onClick={() => toggleFAQ(index)}>
+          <h3>{faq.question}</h3>
+          <span>{activeIndex === index ? '-' : '+'}</span>
+        </div>
+        <div className="faq-answer">
+          <p>{faq.answer}</p>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>
+
+
 
 
       <Contact />
