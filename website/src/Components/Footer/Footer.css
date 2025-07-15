@@ -9,7 +9,7 @@
   display: flex;
   flex-wrap: nowrap;
   justify-content: flex-start;
-  gap: 60px;
+  gap: 550px;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
@@ -18,7 +18,9 @@
 .footer-logo-column {
   display: flex;
   flex-direction: column;
-  margin-left: 40px; /* adjust to move logo right/left */
+  /* Change this line: */
+  margin-left: -250px; /* Set to 0 to align with the footer-container's padding */
+  /* Or you can just remove the margin-left property entirely from here if 0 is desired */
 }
 
 .footer-small-logo {
@@ -38,8 +40,10 @@
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  gap: 60px;
+  gap: 120px; /* Keep your adjusted gap here */
+  margin-top: 20px; /* Add this line to push these columns down */
 }
+
 
 .footer-links,
 .footer-contact {
