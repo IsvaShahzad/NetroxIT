@@ -46,3 +46,15 @@ body{
     transform: rotate(360deg);
   }
 }
+
+.fade-wrapper {
+  transition: opacity 0.8s ease;
+}
+
+.fade-in {
+  opacity: 1;
+}
+
+.fade-out {
+  opacity: 0;
+}

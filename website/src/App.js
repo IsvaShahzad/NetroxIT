@@ -6,11 +6,10 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { BrowserRouter as Router, Routes, Route, useNavigate, useLocation } from 'react-router-dom';
 import React, { useRef } from 'react';
-import ServicePage from './Components/ServicePage/servicepage.js';
-
+import MobileDevelopmentPage from './Components/ServicePage/MobileDevelopmentPage';
+import WebDevelopmentPage from './Components/ServicePage/WebDevelopmentPage.js'
+import Footer from './Components/Footer/Footer'; 
 function AppWrapper() {
-  // ✅ Refs for other sections
-  // const statsRef = useRef(null);
   const aboutRef = useRef(null);
   const servicesRef = useRef(null);
 
@@ -19,46 +18,46 @@ function AppWrapper() {
 
   const scrollTo = (ref) => {
     if (ref?.current) {
-      const yOffset = -100; // adjust for sticky navbar
+      const yOffset = -100; 
       const y = ref.current.getBoundingClientRect().top + window.pageYOffset + yOffset;
       window.scrollTo({ top: y, behavior: 'smooth' });
     }
   };
 
   const handleNavClick = (section) => {
-  if (section === 'footer') {
-    const footer = document.getElementById('footer');
-    if (footer) {
-      footer.scrollIntoView({ behavior: 'smooth' });
+    if (section === 'footer') {
+      const footer = document.getElementById('footer');
+      if (footer) {
+        footer.scrollIntoView({ behavior: 'smooth' });
+      }
+      return;
     }
-    return;
-  }
 
-  if (section === 'reviews') {
-    const reviews = document.getElementById('reviews');
-    if (reviews) {
-      reviews.scrollIntoView({ behavior: 'smooth' });
+    if (section === 'reviews') {
+      const reviews = document.getElementById('reviews');
+      if (reviews) {
+        reviews.scrollIntoView({ behavior: 'smooth' });
+      }
+      return;
     }
-    return;
-  }
 
-  const refMap = {
-    company: aboutRef,
-    solutions: servicesRef,
+    const refMap = {
+      company: aboutRef,
+      solutions: servicesRef,
+    };
+
+    if (location.pathname === '/') {
+      scrollTo(refMap[section]);
+    } else {
+      navigate('/');
+      setTimeout(() => scrollTo(refMap[section]), 500);
+    }
   };
-
-  if (location.pathname === '/') {
-    scrollTo(refMap[section]);
-  } else {
-    navigate('/');
-    setTimeout(() => scrollTo(refMap[section]), 500);
-  }
-};
-
 
   return (
     <>
       <NavBar onNavClick={handleNavClick} />
+
       <Routes>
         <Route
           path="/"
@@ -71,16 +70,17 @@ function AppWrapper() {
         />
 
         <Route
-          path="/webapp"
-          element={
-            <ServicePage
-              title="Web App Development Services"
-              description="Expand your reach to a global audience, unlock new growth opportunities, and broaden your business operations with our web application solutions."
-              image="/images/webapp-hero.png"
-            />
-          }
+          path="/mobile-app-development"
+          element={<MobileDevelopmentPage />}
         />
+
+        <Route
+          path="/web-application"
+          element={<WebDevelopmentPage/>}
+        />
+
       </Routes>
+
     </>
   );
 }

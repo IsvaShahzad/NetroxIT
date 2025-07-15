@@ -39,8 +39,12 @@ const Footer = () => {
           <div className="footer-links">
             <h4>Quick Links</h4>
             <ul>
-              <li><Link to="/web-application">Web Application</Link></li>
-              <li><Link to="/app-development">App Development</Link></li>
+              <li><Link to="/web-application">Web Development</Link></li>
+                 <li>
+                    <a href="/mobile-app-development">Mobile App Development</a>
+                     </li>
+
+
               <li><Link to="/cyber-security">Cyber Security</Link></li>
               <li><Link to="/graphic-designing">Graphic Designing</Link></li>
               <li><Link to="/ai-ml">AI / ML</Link></li>
@@ -60,15 +64,15 @@ const Footer = () => {
           <div className="footer-contact">
             <h4>Contact Us</h4>
            <p>
-  <MdEmail />{" "}
-  <a
-    href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=netroxit000@gmail.com"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    netroxit000@gmail.com
-  </a>
-</p>
+          <MdEmail />{" "}
+            <a
+              href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=netroxit000@gmail.com"
+               target="_blank"
+              rel="noopener noreferrer"
+               >
+               netroxit000@gmail.com
+                </a>
+               </p>
 
             <p>
               <MdPhone /> +92 3140597523
