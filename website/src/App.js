@@ -9,8 +9,8 @@ import React, { useRef } from 'react';
 import ServicePage from './Components/ServicePage/servicepage.js';
 
 function AppWrapper() {
-  // ✅ refs to DOM nodes
-  const statsRef = useRef(null);
+  // ✅ Refs for other sections
+  // const statsRef = useRef(null);
   const aboutRef = useRef(null);
   const servicesRef = useRef(null);
 
@@ -26,44 +26,60 @@ function AppWrapper() {
   };
 
   const handleNavClick = (section) => {
-
-    const refMap = {
-      reviews: statsRef,
-      company: aboutRef,
-      solutions: servicesRef,
-    };
-
-    if (location.pathname === '/') {
-      scrollTo(refMap[section]);
-    } else {
-      navigate('/');
-      setTimeout(() => scrollTo(refMap[section]), 500);
+  if (section === 'footer') {
+    const footer = document.getElementById('footer');
+    if (footer) {
+      footer.scrollIntoView({ behavior: 'smooth' });
     }
+    return;
+  }
+
+  if (section === 'reviews') {
+    const reviews = document.getElementById('reviews');
+    if (reviews) {
+      reviews.scrollIntoView({ behavior: 'smooth' });
+    }
+    return;
+  }
+
+  const refMap = {
+    company: aboutRef,
+    solutions: servicesRef,
   };
+
+  if (location.pathname === '/') {
+    scrollTo(refMap[section]);
+  } else {
+    navigate('/');
+    setTimeout(() => scrollTo(refMap[section]), 500);
+  }
+};
+
 
   return (
     <>
       <NavBar onNavClick={handleNavClick} />
       <Routes>
-        <Route path="/" element={
-          <Home 
-            statsRef={statsRef} 
-            aboutRef={aboutRef} 
-            servicesRef={servicesRef} 
-          />
-        } />
+        <Route
+          path="/"
+          element={
+            <Home
+              aboutRef={aboutRef}
+              servicesRef={servicesRef}
+            />
+          }
+        />
 
         <Route
-  path="/webapp"
-  element={
-    <ServicePage
-      title="Web App Development Services"
-      description="Expand your reach to a global audience, unlock new growth opportunities, and broaden your business operations with our web application solutions."
-      image="/images/webapp-hero.png" // Save your illustration here
-    />
-  }
-/>
-
+          path="/webapp"
+          element={
+            <ServicePage
+              title="Web App Development Services"
+              description="Expand your reach to a global audience, unlock new growth opportunities, and broaden your business operations with our web application solutions."
+              image="/images/webapp-hero.png"
+            />
+          }
+        />
       </Routes>
     </>
   );

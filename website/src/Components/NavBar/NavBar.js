@@ -41,19 +41,23 @@ function NavBar({ onNavClick }) {
                 Solutions
               </span>
             </li>
-            <li className='nav-item'>
-              <span className='nav-links' onClick={() => { onNavClick('reviews'); closeMobileMenu(); }}>
-                Reviews
-              </span>
-            </li>
-        <li className='nav-item'>
-  <span
-    className='nav-links'
-    onClick={() => window.open('https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=netroxit000@gmail.com', '_blank')}
-  >
-    Contact Us
-  </span>
-</li>
+           <li className='nav-item'>
+                <span
+                   className='nav-links'
+             onClick={() => { onNavClick('reviews'); closeMobileMenu(); }}
+                  >
+                     Reviews
+                   </span>
+                     </li>
+       <li className='nav-item'>
+                <span
+                   className='nav-links'
+             onClick={() => { onNavClick('footer'); closeMobileMenu(); }}
+                  >
+                     Contact Us
+                   </span>
+                     </li>
+
 
 
 

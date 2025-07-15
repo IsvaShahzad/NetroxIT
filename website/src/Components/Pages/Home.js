@@ -11,13 +11,13 @@ import Team from '../Team/Team';
 import Contact from '../Contact/Contact';
 import Footer from '../Footer/Footer';
 
-function Home({ statsRef, aboutRef, servicesRef , productref }) {
+function Home({ aboutRef, servicesRef, productref, footerref }) {
   return (
     <>
       <Main />
 
       <section id="reviews">
-        <HomeStats ref={statsRef} />
+        <HomeStats />
       </section>
 
       <section id="company">
@@ -28,21 +28,21 @@ function Home({ statsRef, aboutRef, servicesRef , productref }) {
         <Services ref={servicesRef} />
       </section>
 
-       <section id="products">
-        <Projects  ref={productref}  />
+      <TechShowcase />
+
+      <section id="products">
+        <Projects ref={productref} />
       </section>
 
-    
-
-      <TechShowcase />
-      <Projects />
       <OurTeam />
       <Team />
       <Contact />
-      <Footer />
+
+      <section id="footer">
+        <Footer ref={footerref} />
+      </section>
     </>
   );
 }
-
 
 export default Home;

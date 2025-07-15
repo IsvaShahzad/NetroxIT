@@ -103,7 +103,7 @@ const Projects = () => {
   }, [activeTab]);
 
   return (
-    <div className="projects-wrapper">
+     <div id="products" className="projects-wrapper">
       <p className="projects-subtitle">OUR   PRODUCTS</p>
       <h2 className="projects-title">Showcasing Innovation, Delivering Impact</h2>
       <ProjectsTabs activeTab={activeTab} onTabChange={setActiveTab} />
