@@ -36,7 +36,7 @@ const HomeStats = () => {
   ];
 
   return (
-    <div className="stats-section">
+    <div id="reviews" className="stats-section">
       <h2 className="stats-heading">Our Trusted Clients</h2>
       <div className="stats-container" ref={statsRef}>
         <div className="stats-content">

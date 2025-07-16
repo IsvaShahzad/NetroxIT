@@ -151,15 +151,15 @@ const toggleFAQ = (index) => {
   <div className={`tech-icon-set ${activeTab === 'Forensics' ? 'active' : ''}`}>
 
       <div className="tech-icon-item">
-        <img src="/images/v1.png" alt="Dart" />
+        <img src="/images/v1.png" alt="Volatility" />
         <p>Volatility</p>
       </div>
       <div className="tech-icon-item">
-        <img src="/images/autopsy.png" alt="JavaScript" />
+        <img src="/images/autopsy.png" alt="Autopsy" />
         <p>Autopsy</p>
       </div>
       <div className="tech-icon-item">
-        <img src="/images/yara2.png" alt="TypeScript" />
+        <img src="/images/yara2.png" alt="YARA" />
         <p>YARA</p>
       </div>
       
@@ -170,23 +170,23 @@ const toggleFAQ = (index) => {
   
 <div className={`tech-icon-set ${activeTab === 'Vulnerability Assessment' ? 'active' : ''}`}>
   <div className="tech-icon-item">
-    <img src="/images/meta.png" alt="Flutter" />
+    <img src="/images/meta.png" alt="Metasploit" />
     <p>Metasploit</p>
   </div>
   <div className="tech-icon-item">
-    <img src="/images/nmap.png" alt="React Native" />
+    <img src="/images/nmap.png" alt="Nmap" />
     <p>Nmap</p>
   </div>
   <div className="tech-icon-item">
-    <img src="/images/nessus15thlogo.png" alt="Android SDK" />
+    <img src="/images/nessus15thlogo.png" alt="Nessus" />
     <p>Nessus</p>
   </div>
   <div className="tech-icon-item">
-    <img src="/images/burp.png" alt="Unity" />
+    <img src="/images/burp.png" alt="Burp suite" />
     <p>Burp suite</p>
   </div>
    <div className="tech-icon-item">
-    <img src="/images/uu1.png" alt="Unity" />
+    <img src="/images/uu1.png" alt="OpenVAS" />
     <p>OpenVAS</p>
   </div>
   
@@ -194,44 +194,37 @@ const toggleFAQ = (index) => {
 
 <div className={`tech-icon-set ${activeTab === 'Network Security' ? 'active' : ''}`}>
   <div className="tech-icon-item">
-    <img src="/images/wireshark-icon.png" alt="Firebase" />
+    <img src="/images/wireshark-icon.png" alt="Wireshark" />
     <p>Wireshark</p>
   </div>
   <div className="tech-icon-item">
-    <img src="/images/tcp1.png" alt="MySQL" />
+    <img src="/images/tcp1.png" alt="Tcpdump" />
     <p>Tcpdump</p>
   </div>
   <div className="tech-icon-item">
-    <img src="/images/snort2.png" alt="MongoDB" />
+    <img src="/images/snort2.png" alt="Snort" />
     <p>Snort</p>
   </div>
   <div className="tech-icon-item">
-    <img src="/images/suricata.png" alt="SQLite" />
+    <img src="/images/suricata.png" alt="Suricata" />
     <p>Suricata</p>
   </div>
 </div>
 
 <div className={`tech-icon-set ${activeTab === 'Monitoring' ? 'active' : ''}`}>
   <div className="tech-icon-item">
-    <img src="/images/splunk1.png" alt="Android Studio" />
+    <img src="/images/splunk1.png" alt="Splunk" />
     <p>Splunk</p>
   </div>
   <div className="tech-icon-item">
-    <img src="/images/elastic-stack.svg" alt="VS Code" />
+    <img src="/images/elastic-stack.svg" alt="ELK Stack" />
     <p>ELK Stack</p>
   </div>
   <div className="tech-icon-item">
-    <img src="/images/ossec.png" alt="VS Code" />
+    <img src="/images/ossec.png" alt="OSSEC" />
     <p>OSSEC</p>
   </div>
-  {/* <div className="tech-icon-item">
-    <img src="/images/figma3.png" alt="Figma" />
-    <p>Figma</p>
-  </div>
-  <div className="tech-icon-item">
-    <img src="/images/ps2.png" alt="Photoshop" />
-    <p>Photoshop</p>
-  </div> */}
+ 
 </div>
 
 </div>

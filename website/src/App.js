@@ -32,35 +32,59 @@ function AppWrapper() {
     }
   };
 
-  const handleNavClick = (section) => {
-    if (section === 'footer') {
+const handleNavClick = (section) => {
+  if (section === 'footer') {
+   if (location.pathname !== '/') {
+    navigate('/');
+    setTimeout(() => {
       const footer = document.getElementById('footer');
       if (footer) {
         footer.scrollIntoView({ behavior: 'smooth' });
       }
-      return;
+    }, 500); // Wait for page to load
+  } else {
+    const footer = document.getElementById('footer');
+    if (footer) {
+      footer.scrollIntoView({ behavior: 'smooth' });
     }
+  }
+  return;
+  }
 
-    if (section === 'reviews') {
+  const refMap = {
+    company: aboutRef,
+    solutions: servicesRef,
+    reviews: null, // reviews is handled separately
+  };
+
+  if (section === 'reviews') {
+    if (location.pathname === '/') {
       const reviews = document.getElementById('reviews');
       if (reviews) {
         reviews.scrollIntoView({ behavior: 'smooth' });
       }
-      return;
+    } else {
+      navigate('/');
+      setTimeout(() => {
+        const reviews = document.getElementById('reviews');
+        if (reviews) {
+          reviews.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 500);
     }
+    return;
+  }
 
-    const refMap = {
-      company: aboutRef,
-      solutions: servicesRef,
-    };
-
+  if (refMap[section]) {
     if (location.pathname === '/') {
       scrollTo(refMap[section]);
     } else {
       navigate('/');
       setTimeout(() => scrollTo(refMap[section]), 500);
     }
-  };
+  }
+};
+
 
   const handlePageNav = (path) => {
     setIsFading(true);

@@ -2,10 +2,8 @@ import React, { forwardRef } from 'react';
 import ServiceCard from '../ServiceCard/ServiceCard';
 import './Services.css';
 import {
-  FaLaptopCode, FaMobileAlt, FaDesktop, FaGamepad,
-  FaShieldAlt, FaTags, FaSearch, FaRobot, FaCamera,
-  FaLaptop,
-  FaLine,
+  FaLaptopCode, FaMobileAlt, FaDesktop,
+  FaShieldAlt, FaRobot, 
   FaServer,
   FaCommentAlt,
   FaPaintBrush
