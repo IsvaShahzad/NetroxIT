@@ -4,7 +4,7 @@ import Contact from '../Contact/Contact';
 import './MobileDevelopmentPage.css';
 
 
-function MobileDevelopmentPage() {
+function CybersecurityPage() {
   const [activeTab, setActiveTab] = useState('Frontend');
   const [isTechVisible, setIsTechVisible] = useState(false);
   const techSectionRef = useRef(null);
@@ -12,38 +12,39 @@ function MobileDevelopmentPage() {
 
 const faqData = [
   {
-    question: 'What kinds of mobile apps can you develop?',
-    answer: 'We build cross-platform mobile applications for iOS and Android using Flutter and React Native. From MVPs to complex, scalable solutions, we tailor each app to meet your business goals and your users’ expectations.',
+    question: 'What cyber security services do you offer?',
+    answer: 'We provide end-to-end cyber security solutions including vulnerability assessments, penetration testing, threat monitoring, network security, cloud security, and incident response. Our services are tailored to protect your digital assets and ensure compliance.',
   },
   {
-    question: 'Do you provide UI/UX design services?',
-    answer: 'Yes! We have an in-house design team that creates user-friendly, visually engaging interfaces. We follow best practices for wireframing, prototyping, and usability testing to ensure the final product delights users.',
+    question: 'How do you ensure my business stays protected?',
+    answer: 'Our experts implement multi-layered security measures, regular audits, real-time monitoring, and proactive threat detection to stay ahead of evolving cyber threats. We design custom security strategies that match your industry and risk profile.',
   },
   {
-    question: 'How much does a typical project cost?',
-    answer: 'Project costs vary depending on complexity, features, integrations, and timeline. We provide clear, upfront estimates after understanding your requirements and always keep you informed throughout development.',
+    question: 'How much does cyber security cost?',
+    answer: 'Costs depend on the scope of your security needs, the size of your infrastructure, and the level of protection required. We provide clear, customized estimates after assessing your requirements and goals.',
   },
   {
-    question: 'What technologies do you specialize in?',
-    answer: 'We specialize in Flutter, React Native, Firebase, Node.js, MongoDB, REST APIs, and more. Our team chooses the right stack to match your project’s technical needs and future growth plans.',
+    question: 'What industries do you serve?',
+    answer: 'We work with companies of all sizes across industries including finance, healthcare, e-commerce, SaaS, and more. Our team understands sector-specific compliance needs such as GDPR, HIPAA, and PCI DSS.',
   },
   {
-    question: 'How long will it take to launch my app?',
-    answer: 'Timelines depend on the size and complexity of your project. On average, simple apps take 4–8 weeks, while more advanced platforms may take 3–6 months. We always aim to deliver efficiently without compromising quality.',
+    question: 'Can you help with data breach recovery?',
+    answer: 'Absolutely. We provide rapid incident response services to contain threats, recover compromised data, and restore your systems. We also analyze breaches to strengthen your defenses and prevent future attacks.',
   },
   {
-    question: 'Will I own the code and IP?',
-    answer: 'Absolutely. You will have complete ownership of the final source code and intellectual property once the project is complete and paid for. We believe in full transparency and client ownership.',
+    question: 'Will you train our staff on security best practices?',
+    answer: 'Yes! Human error is a major risk factor. We offer employee training sessions, phishing simulations, and security awareness programs to help your team recognize threats and follow safe practices.',
   },
   {
-    question: 'Do you offer ongoing support and updates?',
-    answer: 'Yes! After launch, we can help maintain your app, fix bugs, roll out updates, and add new features. We offer flexible support plans to keep your product secure and up to date.',
+    question: 'Do you offer ongoing monitoring and support?',
+    answer: 'Yes — we provide 24/7 monitoring, threat detection, and regular security updates. Our team is available for ongoing support, audits, and advisory services to keep your business secure.',
   },
   {
     question: 'How do we get started?',
-    answer: 'It’s simple — reach out to us through our Contact Us page or schedule a free consultation. We’ll discuss your vision, define goals, and plan a roadmap to bring your idea to life!',
+    answer: 'Getting started is easy — reach out through our Contact Us page to schedule a free consultation. We’ll assess your current security posture, identify gaps, and develop a plan to protect your business from threats.',
   },
 ];
+
 
 
 const toggleFAQ = (index) => {
@@ -98,10 +99,11 @@ const toggleFAQ = (index) => {
       <main className="mobile-dev-content">
         <div className="mobile-dev-content-wrapper">
           <div className="mobile-dev-text">
-            <h1 className="mobile-dev-title">Mobile App Development</h1>
+            <h1 className="mobile-dev-title">Cyber Security</h1>
             <p className="mobile-dev-description">
-              Transform ideas into impactful mobile solutions that strengthen customer loyalty,
-              open new revenue streams, and put your business right in your customers' hands.
+              Strengthen your defenses with tailored cyber security strategies that protect
+               your data, uphold customer trust, meet compliance standards,
+               and keep your business safe from modern cyber threats.
             </p>
             <button
               className="contact-us-button"
@@ -115,8 +117,8 @@ const toggleFAQ = (index) => {
           </div>
 
           <img
-            src="/images/y2.jpg"
-            alt="Mobile App Development"
+            src="/images/cyber1.jpg"
+            alt="   Cyber Security"
             className="mobile-dev-image"
           />
         </div>
@@ -132,7 +134,7 @@ const toggleFAQ = (index) => {
   <h2 className="tech-heading">Our Technology Expertise</h2>
 
   <div className="tech-tabs">
-    {['Languages', 'Frameworks', 'Databases', 'Tools'].map((tab) => (
+    {['Forensics', 'Vulnerability Assessment', 'Network', 'Monitoring'].map((tab) => (
       <button
         key={tab}
         className={`tech-tab ${activeTab === tab ? 'active' : ''}`}
@@ -146,87 +148,81 @@ const toggleFAQ = (index) => {
  <div className="tech-icons">
     <div className="tech-icons-blur"></div> 
 
-  <div className={`tech-icon-set ${activeTab === 'Languages' ? 'active' : ''}`}>
+  <div className={`tech-icon-set ${activeTab === 'Forensics' ? 'active' : ''}`}>
 
       <div className="tech-icon-item">
-        <img src="/images/dart-icon.png" alt="Dart" />
-        <p>Dart</p>
+        <img src="/images/v1.png" alt="Dart" />
+        <p>Volatility</p>
       </div>
       <div className="tech-icon-item">
-        <img src="/images/javascipt-icon4.png" alt="JavaScript" />
-        <p>JavaScript</p>
+        <img src="/images/autopsy.png" alt="JavaScript" />
+        <p>Autopsy</p>
       </div>
       <div className="tech-icon-item">
-        <img src="/images/ts-icon.png" alt="TypeScript" />
-        <p>TypeScript</p>
+        <img src="/images/yara2.png" alt="TypeScript" />
+        <p>YARA</p>
       </div>
-      <div className="tech-icon-item">
-        <img src="/images/java.png" alt="Java" />
-        <p>Java</p>
-      </div>
-      <div className="tech-icon-item">
-        <img src="/images/html.png" alt="HTML" />
-        <p>HTML</p>
-      </div>
-      <div className="tech-icon-item">
-        <img src="/images/css3.png" alt="CSS" />
-        <p>CSS</p>
-      </div>
-      <div className="tech-icon-item">
-        <img src="/images/python1.png" alt="Python" />
-        <p>Python</p>
-      </div>
+      
     </div>
   
 
   
   
-<div className={`tech-icon-set ${activeTab === 'Frameworks' ? 'active' : ''}`}>
+<div className={`tech-icon-set ${activeTab === 'Vulnerability Assessment' ? 'active' : ''}`}>
   <div className="tech-icon-item">
-    <img src="/images/flutter2-icon.png" alt="Flutter" />
-    <p>Flutter</p>
+    <img src="/images/meta.png" alt="Flutter" />
+    <p>Metasploit</p>
   </div>
   <div className="tech-icon-item">
-    <img src="/images/react2-icon.png" alt="React Native" />
-    <p>React Native</p>
+    <img src="/images/nmap.png" alt="React Native" />
+    <p>Nmap</p>
   </div>
   <div className="tech-icon-item">
-    <img src="/images/android-os.png" alt="Android SDK" />
-    <p>Android SDK</p>
+    <img src="/images/nessus15thlogo.png" alt="Android SDK" />
+    <p>Nessus</p>
   </div>
   <div className="tech-icon-item">
-    <img src="/images/un1.png" alt="Unity" />
-    <p>Unity</p>
+    <img src="/images/burp.png" alt="Unity" />
+    <p>Burp suite</p>
+  </div>
+   <div className="tech-icon-item">
+    <img src="/images/uu1.png" alt="Unity" />
+    <p>OpenVAS</p>
+  </div>
+  
+</div>
+
+<div className={`tech-icon-set ${activeTab === 'Network' ? 'active' : ''}`}>
+  <div className="tech-icon-item">
+    <img src="/images/wireshark-icon.png" alt="Firebase" />
+    <p>Wireshark</p>
+  </div>
+  <div className="tech-icon-item">
+    <img src="/images/tcp1.png" alt="MySQL" />
+    <p>Tcpdump</p>
+  </div>
+  <div className="tech-icon-item">
+    <img src="/images/snort2.png" alt="MongoDB" />
+    <p>Snort</p>
+  </div>
+  <div className="tech-icon-item">
+    <img src="/images/suricata.png" alt="SQLite" />
+    <p>Suricata</p>
   </div>
 </div>
 
-<div className={`tech-icon-set ${activeTab === 'Databases' ? 'active' : ''}`}>
+<div className={`tech-icon-set ${activeTab === 'Monitoring' ? 'active' : ''}`}>
   <div className="tech-icon-item">
-    <img src="/images/firebase.png" alt="Firebase" />
-    <p>Firebase</p>
-  </div>
-  <div className="tech-icon-item">
-    <img src="/images/sql.png" alt="MySQL" />
-    <p>MySQL</p>
-  </div>
-  <div className="tech-icon-item">
-    <img src="/images/md4.png" alt="MongoDB" />
-    <p>MongoDB</p>
-  </div>
-  <div className="tech-icon-item">
-    <img src="/images/lite3.png" alt="SQLite" />
-    <p>SQLite</p>
-  </div>
-</div>
-
-<div className={`tech-icon-set ${activeTab === 'Tools' ? 'active' : ''}`}>
-  <div className="tech-icon-item">
-    <img src="/images/as.png" alt="Android Studio" />
-    <p>Android Studio</p>
+    <img src="/images/splunk1.png" alt="Android Studio" />
+    <p>Splunk</p>
   </div>
   <div className="tech-icon-item">
     <img src="/images/vs.png" alt="VS Code" />
-    <p>VS Code</p>
+    <p>ELK Stack</p>
+  </div>
+  <div className="tech-icon-item">
+    <img src="/images/vs.png" alt="VS Code" />
+    <p>OSSEC</p>
   </div>
   {/* <div className="tech-icon-item">
     <img src="/images/figma3.png" alt="Figma" />
@@ -263,13 +259,10 @@ const toggleFAQ = (index) => {
   </div>
 </section>
 
-
-
-
       <Contact />
       <Footer />
     </div>
   );
 }
 
-export default MobileDevelopmentPage;
+export default CybersecurityPage;

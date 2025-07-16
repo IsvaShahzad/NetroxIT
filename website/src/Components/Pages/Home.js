@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import '../../App.css';
 import Main from '../Main/main';
 import HomeStats from '../Stats/HomeStats';
@@ -12,6 +12,26 @@ import Contact from '../Contact/Contact';
 import Footer from '../Footer/Footer';
 
 function Home({ aboutRef, servicesRef, productref, footerref }) {
+
+  useEffect(() => {
+    if (window.location.hash) {
+      const id = window.location.hash.replace('#', '');
+      const el = document.getElementById(id);
+      if (el) {
+        let yOffset = 0;
+
+        if (id === 'vision') {
+          yOffset = -150;
+        } else if (id === 'mission') {
+          yOffset = -300;
+        }
+
+        const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+      }
+    }
+  }, []); // runs once when Home mounts
+
   return (
     <>
       <Main />

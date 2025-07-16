@@ -73,7 +73,7 @@
   font-size: 4.3rem;
   font-weight: 800;
   margin-bottom: 1rem;
-  margin-top: -1rem; /* Pull title up if needed to align with image */
+  margin-top: -6rem; /* Pull title up if needed to align with image */
 }
 
 .mobile-dev-description {
@@ -83,15 +83,10 @@
 }
 
 .mobile-dev-image {
-  max-width: 740px; /* Bigger image for emphasis */
+  max-width: 620px; /* Bigger image for emphasis */
   width: 100%;
   height: auto;
-  flex-shrink: 0;  
-}
-
-.mobile-dev-image-wrapper {
-  flex: 1; /* or auto */
-  display: flex;
+  flex-shrink: 0;
 }
 
 /* Contact Us Button */

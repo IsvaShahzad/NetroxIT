@@ -4,7 +4,7 @@ import Contact from '../Contact/Contact';
 import './MobileDevelopmentPage.css';
 
 
-function WebDevelopmentPage() {
+function MLPage() {
   const [activeTab, setActiveTab] = useState('Frontend');
   const [isTechVisible, setIsTechVisible] = useState(false);
   const techSectionRef = useRef(null);
@@ -99,11 +99,10 @@ const toggleFAQ = (index) => {
       <main className="mobile-dev-content">
         <div className="mobile-dev-content-wrapper">
           <div className="mobile-dev-text">
-            <h1 className="mobile-dev-title">Web Development</h1>
+            <h1 className="mobile-dev-title">Machine Learning and Artificial Intelligence</h1>
             <p className="mobile-dev-description">
-              Turn your ideas into high-performing web platforms that attract users,
-               enhance your brand credibility, and deliver seamless,
-                memorable online experiences.
+              Turn your ideas into powerful AI/ML solutions 
+              that automate, analyze, and help your business make smarter decisions.
             </p>
             <button
               className="contact-us-button"
@@ -284,4 +283,4 @@ const toggleFAQ = (index) => {
   );
 }
 
-export default WebDevelopmentPage;
+export default MLPage;

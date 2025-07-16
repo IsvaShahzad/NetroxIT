@@ -4,7 +4,7 @@ import Contact from '../Contact/Contact';
 import './MobileDevelopmentPage.css';
 
 
-function WebDevelopmentPage() {
+function GraphicDesignPage() {
   const [activeTab, setActiveTab] = useState('Frontend');
   const [isTechVisible, setIsTechVisible] = useState(false);
   const techSectionRef = useRef(null);
@@ -12,36 +12,36 @@ function WebDevelopmentPage() {
 
 const faqData = [
   {
-    question: 'What kinds of websites do you build?',
-    answer: 'We design and develop a wide range of websites — from sleek business landing pages to complex web applications and e-commerce platforms. Each site is crafted to match your goals, target audience, and brand identity.',
+    question: 'What kinds of graphic design services do you offer?',
+    answer: 'We create logos, brand identities, social media graphics, marketing materials, UI elements, packaging, and more — all tailored to reflect your brand’s personality and connect with your audience.',
   },
   {
-    question: 'Do you provide UI/UX design for websites?',
-    answer: 'Yes! Our in-house designers create intuitive, visually appealing interfaces that deliver a smooth user experience. We focus on usability, responsiveness, and aesthetics to ensure your website stands out and converts visitors.',
+    question: 'Do you provide complete branding packages?',
+    answer: 'Yes! We can design a full branding suite including logos, color palettes, typography, brand guidelines, and other collateral to ensure consistency across all your platforms.',
   },
   {
-    question: 'How much does a website project cost?',
-    answer: 'Project costs vary based on scope, features, integrations, and timeline. We provide transparent quotes after learning about your requirements, with no hidden fees, and keep you updated every step of the way.',
+    question: 'How much does a typical graphic design project cost?',
+    answer: 'Pricing depends on project scope, deliverables, and timelines. We provide transparent estimates after discussing your goals and make sure you stay informed at every step.',
   },
   {
-    question: 'What technologies do you use?',
-    answer: 'Our team works with modern web technologies including React, Next.js, Node.js, Firebase, MongoDB, and more. We choose the best tools to deliver secure, scalable, and high-performing websites.',
+    question: 'What design tools and software do you use?',
+    answer: 'Our team uses industry-standard tools like Adobe Photoshop, Illustrator, InDesign, Figma, and Canva Pro to deliver high-quality, versatile designs.',
   },
   {
-    question: 'How long does it take to launch a website?',
-    answer: 'Timelines depend on project complexity. Simple sites can launch in 2–4 weeks, while more advanced builds may take 2–3 months. We set clear milestones to keep your project on track and on time.',
+    question: 'How long does a design project usually take?',
+    answer: 'Timelines vary by project complexity. A simple logo may take a week, while full brand packages or multiple design assets can take 2–4 weeks. We always aim for fast delivery without compromising quality.',
   },
   {
-    question: 'Will I own the website code and content?',
-    answer: 'Yes. You’ll have full ownership of your website’s code, design, and content once the project is complete and payment is settled. We believe in transparency and giving you full control of your digital assets.',
+    question: 'Will I own the final designs?',
+    answer: 'Absolutely. Once the project is complete and approved, you receive all final files and full rights to your designs.',
   },
   {
-    question: 'Do you offer website maintenance and updates?',
-    answer: 'Absolutely. We provide flexible support plans to keep your site secure, updated, and performing at its best — whether you need regular updates, bug fixes, or new features.',
+    question: 'Do you offer revisions?',
+    answer: 'Yes! We include a set number of revisions in our packages to ensure you’re happy with the final result. Additional revisions can be arranged if needed.',
   },
   {
     question: 'How do we get started?',
-    answer: 'Getting started is simple — contact us through our website or book a free consultation. We’ll discuss your goals, answer your questions, and create a clear roadmap to bring your web project to life.',
+    answer: 'Just reach out via our Contact page or book a free consultation. We’ll discuss your ideas, define deliverables, and get to work creating visuals that make an impact.',
   },
 ];
 
@@ -93,17 +93,16 @@ const toggleFAQ = (index) => {
       <div className="scroll-progress-bar"></div>
 
       {/* Blurs for Mobile App Development section */}
-      {/* <div className="mobile-dev-blur"></div> */}
       <div className="mobile-dev-blur-title"></div>
 
       <main className="mobile-dev-content">
         <div className="mobile-dev-content-wrapper">
           <div className="mobile-dev-text">
-            <h1 className="mobile-dev-title">Web Development</h1>
+            <h1 className="mobile-dev-title">Graphic Design</h1>
             <p className="mobile-dev-description">
-              Turn your ideas into high-performing web platforms that attract users,
-               enhance your brand credibility, and deliver seamless,
-                memorable online experiences.
+              Bring your brand to life with stunning visuals and thoughtful design that 
+              connect with your audience. From logos and branding to digital graphics and marketing assets,
+               we craft designs that stand out and leave a lasting impression.
             </p>
             <button
               className="contact-us-button"
@@ -117,8 +116,8 @@ const toggleFAQ = (index) => {
           </div>
 
           <img
-            src="/images/web1.jpg"
-            alt="Web  Development"
+            src="/images/y2.jpg"
+            alt="Mobile App Development"
             className="mobile-dev-image"
           />
         </div>
@@ -134,7 +133,7 @@ const toggleFAQ = (index) => {
   <h2 className="tech-heading">Our Technology Expertise</h2>
 
   <div className="tech-tabs">
-    {['Frontend', 'Backend', 'Databases', 'Frameworks'].map((tab) => (
+    {['Languages', 'Frameworks', 'Databases', 'Tools'].map((tab) => (
       <button
         key={tab}
         className={`tech-tab ${activeTab === tab ? 'active' : ''}`}
@@ -148,9 +147,12 @@ const toggleFAQ = (index) => {
  <div className="tech-icons">
     <div className="tech-icons-blur"></div> 
 
-  <div className={`tech-icon-set ${activeTab === 'Frontend' ? 'active' : ''}`}>
+  <div className={`tech-icon-set ${activeTab === 'Languages' ? 'active' : ''}`}>
 
-      
+      <div className="tech-icon-item">
+        <img src="/images/dart-icon.png" alt="Dart" />
+        <p>Dart</p>
+      </div>
       <div className="tech-icon-item">
         <img src="/images/javascipt-icon4.png" alt="JavaScript" />
         <p>JavaScript</p>
@@ -160,9 +162,9 @@ const toggleFAQ = (index) => {
         <p>TypeScript</p>
       </div>
       <div className="tech-icon-item">
-    <img src="/images/react2-icon.png" alt="React Native" />
-    <p>React Native</p>
-  </div>
+        <img src="/images/java.png" alt="Java" />
+        <p>Java</p>
+      </div>
       <div className="tech-icon-item">
         <img src="/images/html.png" alt="HTML" />
         <p>HTML</p>
@@ -171,40 +173,33 @@ const toggleFAQ = (index) => {
         <img src="/images/css3.png" alt="CSS" />
         <p>CSS</p>
       </div>
-     <div className="tech-icon-item">
-        <img src="/images/bs1.png" alt="Bootstrap" />
-        <p>Bootstrap</p>
-        
-   
-        
-      </div>
-    </div>
-  
-<div className={`tech-icon-set ${activeTab === 'Backend' ? 'active' : ''}`}>
-  <div className="tech-icon-item">
-        <img src="/images/java.png" alt="Java" />
-        <p>Java</p>
-      </div>
-   <div className="tech-icon-item">
+      <div className="tech-icon-item">
         <img src="/images/python1.png" alt="Python" />
         <p>Python</p>
       </div>
-  <div className="tech-icon-item">
-    <img src="/images/android-os.png" alt="Android SDK" />
-    <p>PHP</p>
-  </div>
-  <div className="tech-icon-item">
-    <img src="/images/js1.png" alt="Unity" />
-    <p>Node.js</p>
-  </div>
-   <div className="tech-icon-item">
-    <img src="/images/ej1.png" alt="Unity" />
-    <p>Express.js</p>
-  </div>
-</div>
-  
+    </div>
   
 
+  
+  
+<div className={`tech-icon-set ${activeTab === 'Frameworks' ? 'active' : ''}`}>
+  <div className="tech-icon-item">
+    <img src="/images/flutter2-icon.png" alt="Flutter" />
+    <p>Flutter</p>
+  </div>
+  <div className="tech-icon-item">
+    <img src="/images/react2-icon.png" alt="React Native" />
+    <p>React Native</p>
+  </div>
+  <div className="tech-icon-item">
+    <img src="/images/android-os.png" alt="Android SDK" />
+    <p>Android SDK</p>
+  </div>
+  <div className="tech-icon-item">
+    <img src="/images/un1.png" alt="Unity" />
+    <p>Unity</p>
+  </div>
+</div>
 
 <div className={`tech-icon-set ${activeTab === 'Databases' ? 'active' : ''}`}>
   <div className="tech-icon-item">
@@ -225,29 +220,23 @@ const toggleFAQ = (index) => {
   </div>
 </div>
 
-<div className={`tech-icon-set ${activeTab === 'Frameworks' ? 'active' : ''}`}>
-   <div className="tech-icon-item">
-    <img src="/images/ej1.png" alt="Unity" />
-    <p>Express.js</p>
+<div className={`tech-icon-set ${activeTab === 'Tools' ? 'active' : ''}`}>
+  <div className="tech-icon-item">
+    <img src="/images/as.png" alt="Android Studio" />
+    <p>Android Studio</p>
   </div>
   <div className="tech-icon-item">
-    <img src="/images/ns.png" alt="React Native" />
-    <p>Next.js</p>
+    <img src="/images/vs.png" alt="VS Code" />
+    <p>VS Code</p>
   </div>
- <div className="tech-icon-item">
-        <img src="/images/bs1.png" alt="Bootstrap" />
-        <p>Bootstrap</p>
-      </div>
-  <div className="tech-icon-item">
-    <img src="/images/angular.png" alt="Angular" />
-    <p>Angular</p>
+  {/* <div className="tech-icon-item">
+    <img src="/images/figma3.png" alt="Figma" />
+    <p>Figma</p>
   </div>
   <div className="tech-icon-item">
-        <img src="/images/fast3.png" alt="FAST API" />
-        <p>FAST API</p>
-    
-        
-      </div>
+    <img src="/images/ps2.png" alt="Photoshop" />
+    <p>Photoshop</p>
+  </div> */}
 </div>
 
 </div>
@@ -284,4 +273,4 @@ const toggleFAQ = (index) => {
   );
 }
 
-export default WebDevelopmentPage;
+export default GraphicDesignPage;
