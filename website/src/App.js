@@ -10,11 +10,10 @@ import NavBar from './Components/NavBar/NavBar';
 import Home from './Components/Pages/Home';
 import MobileDevelopmentPage from './Components/ServicePage/MobileDevelopmentPage';
 import WebDevelopmentPage from './Components/ServicePage/WebDevelopmentPage';
-import ServicePage from './Components/ServicePage/servicepage';
 import './App.css';
 import CybersecurityPage from './Components/ServicePage/CybersecurityPage';
 import GraphicDesignPage from './Components/ServicePage/GraphicDesignPage';
-import MLPage from './Components/ServicePage/MLPage.js';
+import MLPage from './Components/ServicePage/MLPage';
 
 function AppWrapper() {
   const [isFading, setIsFading] = useState(false);

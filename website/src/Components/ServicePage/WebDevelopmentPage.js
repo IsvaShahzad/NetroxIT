@@ -190,15 +190,15 @@ const toggleFAQ = (index) => {
         <p>Python</p>
       </div>
   <div className="tech-icon-item">
-    <img src="/images/android-os.png" alt="Android SDK" />
+    <img src="/images/android-os.png" alt="PHP" />
     <p>PHP</p>
   </div>
   <div className="tech-icon-item">
-    <img src="/images/js1.png" alt="Unity" />
+    <img src="/images/js1.png" alt="Node.js" />
     <p>Node.js</p>
   </div>
    <div className="tech-icon-item">
-    <img src="/images/ej1.png" alt="Unity" />
+    <img src="/images/ej1.png" alt="Express.js" />
     <p>Express.js</p>
   </div>
 </div>
@@ -227,11 +227,11 @@ const toggleFAQ = (index) => {
 
 <div className={`tech-icon-set ${activeTab === 'Frameworks' ? 'active' : ''}`}>
    <div className="tech-icon-item">
-    <img src="/images/ej1.png" alt="Unity" />
+    <img src="/images/ej1.png" alt="Express.js" />
     <p>Express.js</p>
   </div>
   <div className="tech-icon-item">
-    <img src="/images/ns.png" alt="React Native" />
+    <img src="/images/ns.png" alt="Next.js" />
     <p>Next.js</p>
   </div>
  <div className="tech-icon-item">

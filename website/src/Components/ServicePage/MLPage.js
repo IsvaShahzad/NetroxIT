@@ -12,38 +12,39 @@ function MLPage() {
 
 const faqData = [
   {
-    question: 'What kinds of websites do you build?',
-    answer: 'We design and develop a wide range of websites — from sleek business landing pages to complex web applications and e-commerce platforms. Each site is crafted to match your goals, target audience, and brand identity.',
+    question: 'What AI and ML solutions do you offer?',
+    answer: 'We build custom AI and machine learning solutions, including predictive analytics, recommendation engines, natural language processing, computer vision, and automation tools — all tailored to solve real business challenges.',
   },
   {
-    question: 'Do you provide UI/UX design for websites?',
-    answer: 'Yes! Our in-house designers create intuitive, visually appealing interfaces that deliver a smooth user experience. We focus on usability, responsiveness, and aesthetics to ensure your website stands out and converts visitors.',
+    question: 'Can you integrate AI into my existing product?',
+    answer: 'Absolutely. We can enhance your current software with intelligent features like chatbots, smart data analysis, or automated workflows, ensuring smooth integration and a measurable impact on your operations.',
   },
   {
-    question: 'How much does a website project cost?',
-    answer: 'Project costs vary based on scope, features, integrations, and timeline. We provide transparent quotes after learning about your requirements, with no hidden fees, and keep you updated every step of the way.',
+    question: 'What industries do you serve?',
+    answer: 'Our AI and ML expertise covers diverse industries, including e-commerce, healthcare, finance, marketing, manufacturing, and more. We adapt each solution to your industry’s unique needs and data.',
   },
   {
-    question: 'What technologies do you use?',
-    answer: 'Our team works with modern web technologies including React, Next.js, Node.js, Firebase, MongoDB, and more. We choose the best tools to deliver secure, scalable, and high-performing websites.',
+    question: 'What technologies do you use for AI and ML?',
+    answer: 'We work with top AI technologies and frameworks like Python, TensorFlow, PyTorch, OpenAI API, FastAPI, Scikit-learn, Keras and more to deliver robust, scalable AI applications.',
   },
   {
-    question: 'How long does it take to launch a website?',
-    answer: 'Timelines depend on project complexity. Simple sites can launch in 2–4 weeks, while more advanced builds may take 2–3 months. We set clear milestones to keep your project on track and on time.',
+    question: 'How long does it take to deliver an AI project?',
+    answer: 'Project timelines vary based on scope, complexity, and data requirements. Prototypes or proof of concepts may take a few weeks, while full-scale AI systems typically take 2–6 months with clear milestones.',
   },
   {
-    question: 'Will I own the website code and content?',
-    answer: 'Yes. You’ll have full ownership of your website’s code, design, and content once the project is complete and payment is settled. We believe in transparency and giving you full control of your digital assets.',
+    question: 'Who owns the AI models and code?',
+    answer: 'You do. Once your project is complete and paid for, you have full ownership of the trained models, source code, and intellectual property. We believe in transparency and your control over your data.',
   },
   {
-    question: 'Do you offer website maintenance and updates?',
-    answer: 'Absolutely. We provide flexible support plans to keep your site secure, updated, and performing at its best — whether you need regular updates, bug fixes, or new features.',
+    question: 'Do you offer support after launch?',
+    answer: 'Yes. We provide post-launch support, performance monitoring, model retraining, and feature updates to ensure your AI solution stays accurate, secure, and aligned with your evolving needs.',
   },
   {
-    question: 'How do we get started?',
-    answer: 'Getting started is simple — contact us through our website or book a free consultation. We’ll discuss your goals, answer your questions, and create a clear roadmap to bring your web project to life.',
+    question: 'How can we get started with AI & ML?',
+    answer: 'Just reach out through our contact form or book a free discovery call. We’ll discuss your goals, evaluate your data, and build a clear roadmap to bring your AI vision to life.',
   },
 ];
+
 
 
 const toggleFAQ = (index) => {
@@ -116,7 +117,7 @@ const toggleFAQ = (index) => {
           </div>
 
           <img
-            src="/images/web1.jpg"
+            src="/images/brain1.jpg"
             alt="Web  Development"
             className="mobile-dev-image"
           />
@@ -133,7 +134,7 @@ const toggleFAQ = (index) => {
   <h2 className="tech-heading">Our Technology Expertise</h2>
 
   <div className="tech-tabs">
-    {['Frontend', 'Backend', 'Databases', 'Frameworks'].map((tab) => (
+    {['Languages', 'Frameworks', 'Tools',].map((tab) => (
       <button
         key={tab}
         className={`tech-tab ${activeTab === tab ? 'active' : ''}`}
@@ -147,100 +148,48 @@ const toggleFAQ = (index) => {
  <div className="tech-icons">
     <div className="tech-icons-blur"></div> 
 
-  <div className={`tech-icon-set ${activeTab === 'Frontend' ? 'active' : ''}`}>
+  <div className={`tech-icon-set ${activeTab === 'Languages' ? 'active' : ''}`}>
 
       
       <div className="tech-icon-item">
-        <img src="/images/javascipt-icon4.png" alt="JavaScript" />
-        <p>JavaScript</p>
-      </div>
-      <div className="tech-icon-item">
-        <img src="/images/ts-icon.png" alt="TypeScript" />
-        <p>TypeScript</p>
-      </div>
-      <div className="tech-icon-item">
-    <img src="/images/react2-icon.png" alt="React Native" />
-    <p>React Native</p>
-  </div>
-      <div className="tech-icon-item">
-        <img src="/images/html.png" alt="HTML" />
-        <p>HTML</p>
-      </div>
-      <div className="tech-icon-item">
-        <img src="/images/css3.png" alt="CSS" />
-        <p>CSS</p>
-      </div>
-     <div className="tech-icon-item">
-        <img src="/images/bs1.png" alt="Bootstrap" />
-        <p>Bootstrap</p>
-        
-   
-        
-      </div>
-    </div>
-  
-<div className={`tech-icon-set ${activeTab === 'Backend' ? 'active' : ''}`}>
-  <div className="tech-icon-item">
-        <img src="/images/java.png" alt="Java" />
-        <p>Java</p>
-      </div>
-   <div className="tech-icon-item">
         <img src="/images/python1.png" alt="Python" />
         <p>Python</p>
       </div>
-  <div className="tech-icon-item">
-    <img src="/images/android-os.png" alt="Android SDK" />
-    <p>PHP</p>
+      <div className="tech-icon-item">
+        <img src="/images/java.png" alt="Java" />
+        <p>Java</p>
+      </div>
+      <div className="tech-icon-item">
+    <img src="/images/cpp.png" alt="C++" />
+    <p>C++</p>
   </div>
-  <div className="tech-icon-item">
-    <img src="/images/js1.png" alt="Unity" />
-    <p>Node.js</p>
-  </div>
-   <div className="tech-icon-item">
-    <img src="/images/ej1.png" alt="Unity" />
-    <p>Express.js</p>
-  </div>
-</div>
+      <div className="tech-icon-item">
+        <img src="/images/html.png" alt="Javascript" />
+        <p>Javascript</p>
+      </div>
+    
+        
+   
+    </div>
   
-  
-
-
-<div className={`tech-icon-set ${activeTab === 'Databases' ? 'active' : ''}`}>
-  <div className="tech-icon-item">
-    <img src="/images/firebase.png" alt="Firebase" />
-    <p>Firebase</p>
-  </div>
-  <div className="tech-icon-item">
-    <img src="/images/sql.png" alt="MySQL" />
-    <p>MySQL</p>
-  </div>
-  <div className="tech-icon-item">
-    <img src="/images/md4.png" alt="MongoDB" />
-    <p>MongoDB</p>
-  </div>
-  <div className="tech-icon-item">
-    <img src="/images/lite3.png" alt="SQLite" />
-    <p>SQLite</p>
-  </div>
-</div>
-
 <div className={`tech-icon-set ${activeTab === 'Frameworks' ? 'active' : ''}`}>
-   <div className="tech-icon-item">
-    <img src="/images/ej1.png" alt="Unity" />
-    <p>Express.js</p>
-  </div>
   <div className="tech-icon-item">
-    <img src="/images/ns.png" alt="React Native" />
-    <p>Next.js</p>
-  </div>
- <div className="tech-icon-item">
-        <img src="/images/bs1.png" alt="Bootstrap" />
-        <p>Bootstrap</p>
+        <img src="/images/tf1.png" alt="TensorFlow" />
+        <p>TensorFlow</p>
+      </div>
+   <div className="tech-icon-item">
+        <img src="/images/py2.png" alt="PyTorch" />
+        <p>PyTorch</p>
       </div>
   <div className="tech-icon-item">
-    <img src="/images/angular.png" alt="Angular" />
-    <p>Angular</p>
+    <img src="/images/keras1.png" alt="Keras" />
+    <p>Keras</p>
   </div>
+  <div className="tech-icon-item">
+    <img src="/images/sk.png" alt="Scikit-learn" />
+    <p>Scikit-learn</p>
+  </div>
+  
   <div className="tech-icon-item">
         <img src="/images/fast3.png" alt="FAST API" />
         <p>FAST API</p>
@@ -248,6 +197,30 @@ const toggleFAQ = (index) => {
         
       </div>
 </div>
+  
+  
+
+
+<div className={`tech-icon-set ${activeTab === 'Tools' ? 'active' : ''}`}>
+  <div className="tech-icon-item">
+    <img src="/images/jy1.png" alt="Jupyter Notebook" />
+    <p>Jupyter Notebook</p>
+  </div>
+  <div className="tech-icon-item">
+    <img src="/images/collab.png" alt="MySQL" />
+    <p>Google Collab</p>
+  </div>
+  <div className="tech-icon-item">
+    <img src="/images/anaconda.png" alt="Anaconda" />
+    <p>Anaconda</p>
+  </div>
+  <div className="tech-icon-item">
+    <img src="/images/vs.png" alt="VS Code" />
+    <p>VS Code</p>
+  </div>
+</div>
+
+
 
 </div>
 

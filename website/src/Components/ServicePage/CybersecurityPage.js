@@ -134,7 +134,7 @@ const toggleFAQ = (index) => {
   <h2 className="tech-heading">Our Technology Expertise</h2>
 
   <div className="tech-tabs">
-    {['Forensics', 'Vulnerability Assessment', 'Network', 'Monitoring'].map((tab) => (
+    {['Forensics', 'Vulnerability Assessment', 'Network Security', 'Monitoring'].map((tab) => (
       <button
         key={tab}
         className={`tech-tab ${activeTab === tab ? 'active' : ''}`}
@@ -192,7 +192,7 @@ const toggleFAQ = (index) => {
   
 </div>
 
-<div className={`tech-icon-set ${activeTab === 'Network' ? 'active' : ''}`}>
+<div className={`tech-icon-set ${activeTab === 'Network Security' ? 'active' : ''}`}>
   <div className="tech-icon-item">
     <img src="/images/wireshark-icon.png" alt="Firebase" />
     <p>Wireshark</p>
@@ -217,11 +217,11 @@ const toggleFAQ = (index) => {
     <p>Splunk</p>
   </div>
   <div className="tech-icon-item">
-    <img src="/images/vs.png" alt="VS Code" />
+    <img src="/images/elastic-stack.svg" alt="VS Code" />
     <p>ELK Stack</p>
   </div>
   <div className="tech-icon-item">
-    <img src="/images/vs.png" alt="VS Code" />
+    <img src="/images/ossec.png" alt="VS Code" />
     <p>OSSEC</p>
   </div>
   {/* <div className="tech-icon-item">

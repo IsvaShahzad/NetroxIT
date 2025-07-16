@@ -116,7 +116,7 @@ const toggleFAQ = (index) => {
           </div>
 
           <img
-            src="/images/y2.jpg"
+            src="/images/office1.jpg"
             alt="Mobile App Development"
             className="mobile-dev-image"
           />
@@ -133,7 +133,7 @@ const toggleFAQ = (index) => {
   <h2 className="tech-heading">Our Technology Expertise</h2>
 
   <div className="tech-tabs">
-    {['Languages', 'Frameworks', 'Databases', 'Tools'].map((tab) => (
+    {['Tools', 'Prototyping', 'Asset Libraries',].map((tab) => (
       <button
         key={tab}
         className={`tech-tab ${activeTab === tab ? 'active' : ''}`}
@@ -147,97 +147,62 @@ const toggleFAQ = (index) => {
  <div className="tech-icons">
     <div className="tech-icons-blur"></div> 
 
-  <div className={`tech-icon-set ${activeTab === 'Languages' ? 'active' : ''}`}>
+  <div className={`tech-icon-set ${activeTab === 'Tools' ? 'active' : ''}`}>
 
       <div className="tech-icon-item">
-        <img src="/images/dart-icon.png" alt="Dart" />
-        <p>Dart</p>
+        <img src="/images/canva.svg" alt="Canva" />
+        <p>Canva</p>
       </div>
       <div className="tech-icon-item">
-        <img src="/images/javascipt-icon4.png" alt="JavaScript" />
-        <p>JavaScript</p>
+    <img src="/images/ps2.png" alt="Adobe Photoshop" />
+        <p>Adobe Photoshop</p>
       </div>
       <div className="tech-icon-item">
-        <img src="/images/ts-icon.png" alt="TypeScript" />
-        <p>TypeScript</p>
+        <img src="/images/adobe-illustrator.svg" alt="Illustrator" />
+        <p>Illustrator</p>
       </div>
       <div className="tech-icon-item">
-        <img src="/images/java.png" alt="Java" />
-        <p>Java</p>
-      </div>
-      <div className="tech-icon-item">
-        <img src="/images/html.png" alt="HTML" />
-        <p>HTML</p>
-      </div>
-      <div className="tech-icon-item">
-        <img src="/images/css3.png" alt="CSS" />
-        <p>CSS</p>
-      </div>
-      <div className="tech-icon-item">
-        <img src="/images/python1.png" alt="Python" />
-        <p>Python</p>
-      </div>
+    <img src="/images/figma3.png" alt="Figma" />
+        <p>Figma</p>
+    
     </div>
-  
+        </div>
+
 
   
   
-<div className={`tech-icon-set ${activeTab === 'Frameworks' ? 'active' : ''}`}>
+<div className={`tech-icon-set ${activeTab === 'Prototyping' ? 'active' : ''}`}>
   <div className="tech-icon-item">
-    <img src="/images/flutter2-icon.png" alt="Flutter" />
-    <p>Flutter</p>
-  </div>
-  <div className="tech-icon-item">
-    <img src="/images/react2-icon.png" alt="React Native" />
-    <p>React Native</p>
-  </div>
-  <div className="tech-icon-item">
-    <img src="/images/android-os.png" alt="Android SDK" />
-    <p>Android SDK</p>
-  </div>
-  <div className="tech-icon-item">
-    <img src="/images/un1.png" alt="Unity" />
-    <p>Unity</p>
-  </div>
-</div>
-
-<div className={`tech-icon-set ${activeTab === 'Databases' ? 'active' : ''}`}>
-  <div className="tech-icon-item">
-    <img src="/images/firebase.png" alt="Firebase" />
-    <p>Firebase</p>
-  </div>
-  <div className="tech-icon-item">
-    <img src="/images/sql.png" alt="MySQL" />
-    <p>MySQL</p>
-  </div>
-  <div className="tech-icon-item">
-    <img src="/images/md4.png" alt="MongoDB" />
-    <p>MongoDB</p>
-  </div>
-  <div className="tech-icon-item">
-    <img src="/images/lite3.png" alt="SQLite" />
-    <p>SQLite</p>
-  </div>
-</div>
-
-<div className={`tech-icon-set ${activeTab === 'Tools' ? 'active' : ''}`}>
-  <div className="tech-icon-item">
-    <img src="/images/as.png" alt="Android Studio" />
-    <p>Android Studio</p>
-  </div>
-  <div className="tech-icon-item">
-    <img src="/images/vs.png" alt="VS Code" />
-    <p>VS Code</p>
-  </div>
-  {/* <div className="tech-icon-item">
     <img src="/images/figma3.png" alt="Figma" />
     <p>Figma</p>
   </div>
   <div className="tech-icon-item">
-    <img src="/images/ps2.png" alt="Photoshop" />
-    <p>Photoshop</p>
-  </div> */}
+    <img src="/images/adobe-xd-logo.svg" alt="Adobe XD" />
+    <p>Adobe XD</p>
+  </div>
+  
 </div>
+
+<div className={`tech-icon-set ${activeTab === 'Asset Libraries' ? 'active' : ''}`}>
+  <div className="tech-icon-item">
+    <img src="/images/freepik-logo.svg" alt="Freepik" />
+    <p>Freepik</p>
+  </div>
+  <div className="tech-icon-item">
+    <img src="/images/unsplash.svg" alt="Unsplash" />
+    <p>Unsplash</p>
+  </div>
+  <div className="tech-icon-item">
+    <img src="/images/adobe1.webp" alt="Adobe Stock" />
+    <p>Adobe Stock</p>
+  </div>
+  <div className="tech-icon-item">
+    <img src="/images/envanto.webp" alt="Envato Elements" />
+    <p>Envato Elements</p>
+  </div>
+</div>
+
+
 
 </div>
 
