@@ -2,6 +2,8 @@ import React, { useEffect, useState, useRef } from 'react';
 import Footer from '../Footer/Footer';
 import Contact from '../Contact/Contact';
 import './MobileDevelopmentPage.css';
+import { cyberFAQ } from '../../data/faqData'; // ✅ Import the Mobile FAQ data
+
 
 
 function CybersecurityPage() {
@@ -10,40 +12,9 @@ function CybersecurityPage() {
   const techSectionRef = useRef(null);
   const [activeIndex, setActiveIndex] = useState(null);
 
-const faqData = [
-  {
-    question: 'What cyber security services do you offer?',
-    answer: 'We provide end-to-end cyber security solutions including vulnerability assessments, penetration testing, threat monitoring, network security, cloud security, and incident response. Our services are tailored to protect your digital assets and ensure compliance.',
-  },
-  {
-    question: 'How do you ensure my business stays protected?',
-    answer: 'Our experts implement multi-layered security measures, regular audits, real-time monitoring, and proactive threat detection to stay ahead of evolving cyber threats. We design custom security strategies that match your industry and risk profile.',
-  },
-  {
-    question: 'How much does cyber security cost?',
-    answer: 'Costs depend on the scope of your security needs, the size of your infrastructure, and the level of protection required. We provide clear, customized estimates after assessing your requirements and goals.',
-  },
-  {
-    question: 'What industries do you serve?',
-    answer: 'We work with companies of all sizes across industries including finance, healthcare, e-commerce, SaaS, and more. Our team understands sector-specific compliance needs such as GDPR, HIPAA, and PCI DSS.',
-  },
-  {
-    question: 'Can you help with data breach recovery?',
-    answer: 'Absolutely. We provide rapid incident response services to contain threats, recover compromised data, and restore your systems. We also analyze breaches to strengthen your defenses and prevent future attacks.',
-  },
-  {
-    question: 'Will you train our staff on security best practices?',
-    answer: 'Yes! Human error is a major risk factor. We offer employee training sessions, phishing simulations, and security awareness programs to help your team recognize threats and follow safe practices.',
-  },
-  {
-    question: 'Do you offer ongoing monitoring and support?',
-    answer: 'Yes — we provide 24/7 monitoring, threat detection, and regular security updates. Our team is available for ongoing support, audits, and advisory services to keep your business secure.',
-  },
-  {
-    question: 'How do we get started?',
-    answer: 'Getting started is easy — reach out through our Contact Us page to schedule a free consultation. We’ll assess your current security posture, identify gaps, and develop a plan to protect your business from threats.',
-  },
-];
+
+  const faqData = cyberFAQ;
+
 
 
 

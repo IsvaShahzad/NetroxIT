@@ -2,6 +2,7 @@ import React, { useEffect, useState, useRef } from 'react';
 import Footer from '../Footer/Footer';
 import Contact from '../Contact/Contact';
 import './MobileDevelopmentPage.css';
+import { graphicFAQ } from '../../data/faqData'; // ✅ Import the Mobile FAQ data
 
 
 function GraphicDesignPage() {
@@ -10,40 +11,8 @@ function GraphicDesignPage() {
   const techSectionRef = useRef(null);
   const [activeIndex, setActiveIndex] = useState(null);
 
-const faqData = [
-  {
-    question: 'What kinds of graphic design services do you offer?',
-    answer: 'We create logos, brand identities, social media graphics, marketing materials, UI elements, packaging, and more — all tailored to reflect your brand’s personality and connect with your audience.',
-  },
-  {
-    question: 'Do you provide complete branding packages?',
-    answer: 'Yes! We can design a full branding suite including logos, color palettes, typography, brand guidelines, and other collateral to ensure consistency across all your platforms.',
-  },
-  {
-    question: 'How much does a typical graphic design project cost?',
-    answer: 'Pricing depends on project scope, deliverables, and timelines. We provide transparent estimates after discussing your goals and make sure you stay informed at every step.',
-  },
-  {
-    question: 'What design tools and software do you use?',
-    answer: 'Our team uses industry-standard tools like Adobe Photoshop, Illustrator, InDesign, Figma, and Canva Pro to deliver high-quality, versatile designs.',
-  },
-  {
-    question: 'How long does a design project usually take?',
-    answer: 'Timelines vary by project complexity. A simple logo may take a week, while full brand packages or multiple design assets can take 2–4 weeks. We always aim for fast delivery without compromising quality.',
-  },
-  {
-    question: 'Will I own the final designs?',
-    answer: 'Absolutely. Once the project is complete and approved, you receive all final files and full rights to your designs.',
-  },
-  {
-    question: 'Do you offer revisions?',
-    answer: 'Yes! We include a set number of revisions in our packages to ensure you’re happy with the final result. Additional revisions can be arranged if needed.',
-  },
-  {
-    question: 'How do we get started?',
-    answer: 'Just reach out via our Contact page or book a free consultation. We’ll discuss your ideas, define deliverables, and get to work creating visuals that make an impact.',
-  },
-];
+  const faqData = graphicFAQ;
+
 
 
 const toggleFAQ = (index) => {

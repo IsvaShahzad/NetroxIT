@@ -2,6 +2,10 @@ import React, { useEffect, useState, useRef } from 'react';
 import Footer from '../Footer/Footer';
 import Contact from '../Contact/Contact';
 import './MobileDevelopmentPage.css';
+import { MLFAQ } from '../../data/faqData'; // ✅ Import the Mobile FAQ data
+import FAQ from '../FAQ/FAQ'; // ✅ Import your reusable FAQ
+
+
 
 
 function MLPage() {
@@ -10,40 +14,8 @@ function MLPage() {
   const techSectionRef = useRef(null);
   const [activeIndex, setActiveIndex] = useState(null);
 
-const faqData = [
-  {
-    question: 'What AI and ML solutions do you offer?',
-    answer: 'We build custom AI and machine learning solutions, including predictive analytics, recommendation engines, natural language processing, computer vision, and automation tools — all tailored to solve real business challenges.',
-  },
-  {
-    question: 'Can you integrate AI into my existing product?',
-    answer: 'Absolutely. We can enhance your current software with intelligent features like chatbots, smart data analysis, or automated workflows, ensuring smooth integration and a measurable impact on your operations.',
-  },
-  {
-    question: 'What industries do you serve?',
-    answer: 'Our AI and ML expertise covers diverse industries, including e-commerce, healthcare, finance, marketing, manufacturing, and more. We adapt each solution to your industry’s unique needs and data.',
-  },
-  {
-    question: 'What technologies do you use for AI and ML?',
-    answer: 'We work with top AI technologies and frameworks like Python, TensorFlow, PyTorch, OpenAI API, FastAPI, Scikit-learn, Keras and more to deliver robust, scalable AI applications.',
-  },
-  {
-    question: 'How long does it take to deliver an AI project?',
-    answer: 'Project timelines vary based on scope, complexity, and data requirements. Prototypes or proof of concepts may take a few weeks, while full-scale AI systems typically take 2–6 months with clear milestones.',
-  },
-  {
-    question: 'Who owns the AI models and code?',
-    answer: 'You do. Once your project is complete and paid for, you have full ownership of the trained models, source code, and intellectual property. We believe in transparency and your control over your data.',
-  },
-  {
-    question: 'Do you offer support after launch?',
-    answer: 'Yes. We provide post-launch support, performance monitoring, model retraining, and feature updates to ensure your AI solution stays accurate, secure, and aligned with your evolving needs.',
-  },
-  {
-    question: 'How can we get started with AI & ML?',
-    answer: 'Just reach out through our contact form or book a free discovery call. We’ll discuss your goals, evaluate your data, and build a clear roadmap to bring your AI vision to life.',
-  },
-];
+
+  const faqData = MLFAQ;
 
 
 
